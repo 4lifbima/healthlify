@@ -1,0 +1,106 @@
+[
+  {
+    "nama": "dr. Sarah Wijaya",
+    "spesialisasi": "Spesialis Anak",
+    "pengalaman": "8 tahun",
+    "pendidikan": "Universitas Indonesia, Spesialis Anak",
+    "rating": 4.9,
+    "jumlah_pasien": 1200,
+    "biaya_konsultasi": 50000,
+    "foto": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+    "tentang": "dr. Sarah adalah seorang spesialis anak yang berdedikasi tinggi dengan pengalaman lebih dari 8 tahun dalam merawat anak-anak. Beliau lulus dari Universitas Indonesia dan menyelesaikan pendidikan spesialisasi anak di RSUP Persahabatan.",
+    "jadwal_praktik": [
+      {
+        "hari": "Senin",
+        "jam": "09:00 - 12:00"
+      },
+      {
+        "hari": "Rabu",
+        "jam": "13:00 - 17:00"
+      },
+      {
+        "hari": "Jumat",
+        "jam": "09:00 - 15:00"
+      }
+    ],
+    "bahasa": ["Indonesia", "Inggris"]
+  },
+  {
+    "nama": "dr. Budi Santoso",
+    "spesialisasi": "Spesialis Jantung",
+    "pengalaman": "12 tahun",
+    "pendidikan": "Universitas Airlangga, Spesialis Jantung",
+    "rating": 5.0,
+    "jumlah_pasien": 850,
+    "biaya_konsultasi": 85000,
+    "foto": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+    "tentang": "dr. Budi adalah ahli jantung terkemuka dengan lebih dari 12 tahun pengalaman. Beliau telah menangani berbagai kasus kompleks penyakit jantung dan merupakan anggota aktif Perhimpunan Kardiologi Indonesia.",
+    "jadwal_praktik": [
+      {
+        "hari": "Selasa",
+        "jam": "10:00 - 14:00"
+      },
+      {
+        "hari": "Kamis",
+        "jam": "14:00 - 18:00"
+      },
+      {
+        "hari": "Sabtu",
+        "jam": "08:00 - 12:00"
+      }
+    ],
+    "bahasa": ["Indonesia", "Inggris"]
+  },
+  {
+    "nama": "dr. Amanda Lee",
+    "spesialisasi": "Spesialis Kulit",
+    "pengalaman": "10 tahun",
+    "pendidikan": "Universitas Gadjah Mada, Spesialis Kulit",
+    "rating": 4.8,
+    "jumlah_pasien": 2100,
+    "biaya_konsultasi": 60000,
+    "foto": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+    "tentang": "dr. Amanda adalah spesialis kulit wanita pertama yang lulus dari UGM. Beliau memiliki ketertarikan khusus pada dermatologi estetika dan telah melakukan banyak penelitian tentang perawatan kulit di iklim tropis Indonesia.",
+    "jadwal_praktik": [
+      {
+        "hari": "Senin",
+        "jam": "13:00 - 17:00"
+      },
+      {
+        "hari": "Rabu",
+        "jam": "09:00 - 13:00"
+      },
+      {
+        "hari": "Jumat",
+        "jam": "14:00 - 18:00"
+      }
+    ],
+    "bahasa": ["Indonesia", "Inggris"]
+  },
+  {
+    "nama": "dr. Kevin Lim",
+    "spesialisasi": "Psikolog Klinis",
+    "pengalaman": "7 tahun",
+    "pendidikan": "Universitas Padjadjaran, Psikologi Klinis",
+    "rating": 4.9,
+    "jumlah_pasien": 980,
+    "biaya_konsultasi": 75000,
+    "foto": "https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+    "tentang": "dr. Kevin adalah psikolog klinis yang berfokus pada terapi kognitif perilaku. Beliau membantu pasien mengatasi berbagai masalah mental seperti kecemasan, depresi, dan gangguan stres pasca trauma.",
+    "jadwal_praktik": [
+      {
+        "hari": "Selasa",
+        "jam": "09:00 - 13:00"
+      },
+      {
+        "hari": "Kamis",
+        "jam": "10:00 - 15:00"
+      },
+      {
+        "hari": "Minggu",
+        "jam": "10:00 - 14:00"
+      }
+    ],
+    "bahasa": ["Indonesia", "Inggris", "Mandarin"]
+  }
+]
