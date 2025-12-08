@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/icon.png" type="image/png">
+    <link rel="icon" href="assets/img/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">"
     <!-- apple icon -->
     <link rel="apple-touch-icon" href="assets/img/icon.png">
     <link rel="apple-touch-icon" href="assets/img/icon.png" type="image/png">
@@ -57,40 +58,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: '#00d982',
-                        'primary-dark': '#00b56c',
-                        'primary-light': '#ccf7e6',
-                        dark: '#0f172a',
-                        card: '#1e293b',
-                    },
-                    animation: {
-                        'float': 'float 6s ease-in-out infinite',
-                        'blob': 'blob 7s infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        blob: {
-                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
-                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
-                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
-                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
-                        }
-                    }
-                }
-            }
-        }
+    <script src="assets/js/tailwind.js">
     </script>
 </head>
 
