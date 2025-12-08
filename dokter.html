@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/icon.png" type="image/png">
+    <title>Cari Dokter - HealthLife</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Config -->
+    <script src="assets/js/tailwind.js"></script>
+</head>
+
+<body class="bg-white dark:bg-dark text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300 shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <div class="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center text-primary">
+                        <i data-lucide="heart-pulse" class="w-6 h-6"></i>
+                    </div>
+                    <span
+                        class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-emerald-600 dark:to-emerald-400">
+                        HealthLife
+                    </span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html"
+                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Beranda</a>
+                    <a href="layanan.html"
+                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Layanan</a>
+                    <a href="dokter.html" class="text-primary font-medium transition">Cari Dokter</a>
+                    <a href="artikel.html"
+                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Artikel</a>
+                </div>
+
+                <!-- Right Actions -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <button id="theme-toggle"
+                        class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-300">
+                        <i data-lucide="moon" class="w-5 h-5 hidden dark:block"></i>
+                        <i data-lucide="sun" class="w-5 h-5 block dark:hidden"></i>
+                    </button>
+
+                    <a href="#" class="text-slate-600 dark:text-slate-300 font-medium hover:text-primary">Masuk</a>
+                    <a href="#"
+                        class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full font-semibold transition shadow-lg shadow-primary/30 hover:shadow-primary/50 flex items-center gap-2">
+                        Daftar
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center gap-4">
+                    <button id="theme-toggle-mobile"
+                        class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-300">
+                        <i data-lucide="moon" class="w-5 h-5 hidden dark:block"></i>
+                        <i data-lucide="sun" class="w-5 h-5 block dark:hidden"></i>
+                    </button>
+                    <button id="mobile-menu-btn"
+                        class="text-slate-600 dark:text-slate-300 hover:text-primary transition">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div id="mobile-menu"
+        class="fixed inset-y-0 right-0 w-[85%] max-w-xs bg-white/95 dark:bg-[#0f172a]/95 backdrop-blur-xl shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-[60] flex flex-col h-full md:hidden border-l border-slate-100 dark:border-slate-800">
+        <div
+            class="p-6 flex justify-between items-center border-b border-slate-100 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center text-primary">
+                    <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+                </div>
+                <span class="text-lg font-bold text-slate-900 dark:text-white">HealthLife</span>
+            </div>
+            <button id="close-menu-btn"
+                class="p-2 rounded-full hover:bg-red-50 hover:text-red-500 text-slate-500 transition-colors">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <div class="flex-1 overflow-y-auto py-6 px-4 space-y-2">
+            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider px-4 mb-2">Menu Utama</div>
+            <a href="index.html"
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                <i data-lucide="home" class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+                Beranda
+            </a>
+            <a href="layanan.html"
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                <i data-lucide="stethoscope"
+                    class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+                Layanan
+            </a>
+            <a href="dokter.html"
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-primary bg-primary/5 rounded-xl transition-all font-medium group">
+                <i data-lucide="user-plus" class="w-5 h-5 text-primary group-hover:text-primary transition-colors"></i>
+                Cari Dokter
+            </a>
+            <a href="artikel.html"
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                <i data-lucide="book-open"
+                    class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+                Artikel
+            </a>
+            <div class="my-6 border-t border-slate-100 dark:border-slate-800"></div>
+            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider px-4 mb-2">Akun</div>
+            <a href="#"
+                class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-all font-medium">
+                <i data-lucide="log-in" class="w-5 h-5 text-slate-400"></i>
+                Masuk
+            </a>
+        </div>
+
+        <div class="p-6 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
+            <a href="#"
+                class="block w-full bg-primary hover:bg-primary-dark text-white text-center py-3.5 rounded-xl font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+                Daftar Sekarang
+            </a>
+            <p class="text-center text-xs text-slate-400 mt-4">© 2023 HealthLife App</p>
+        </div>
+    </div>
+
+    <div id="overlay"
+        class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[55] hidden transition-opacity duration-300 md:hidden">
+    </div>
+
+    <!-- Main Content -->
+    <section class="pt-32 pb-20 bg-white dark:bg-dark min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div>
+                    <span class="text-primary font-semibold tracking-wider uppercase text-sm">Dokter Spesialis</span>
+                    <h1 class="text-3xl md:text-4xl font-bold mt-2 text-slate-900 dark:text-white">Temukan Dokter
+                        Terbaik</h1>
+                    <p class="text-slate-600 dark:text-slate-400 mt-4 max-w-2xl">
+                        Pilih jadwal konsultasi dengan dokter spesialis berpengalaman sesuai kebutuhan medis Anda.
+                    </p>
+                </div>
+                <!-- Filter or Search could go here -->
+                <div class="mt-4 md:mt-0 relative w-full md:w-auto">
+                    <input type="text" placeholder="Cari nama dokter..."
+                        class="w-full md:w-64 pl-10 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-card focus:outline-none focus:ring-2 focus:ring-primary shadow-sm text-sm dark:text-white">
+                    <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-3 top-3.5"></i>
+                </div>
+            </div>
+
+            <div id="dokter-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Loading State -->
+                <div class="col-span-full text-center py-20 hidden" id="loading">
+                    <div
+                        class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-primary border-t-transparent">
+                    </div>
+                    <p class="mt-2 text-slate-500">Memuat data dokter...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 dark:bg-[#0b1120] pt-16 pb-8 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+                            <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-xl font-bold text-slate-900 dark:text-white">HealthLife</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 mb-6">Partner kesehatan terpercaya keluarga Anda.
+                        Melayani dengan hati, didukung teknologi terkini.</p>
+                </div>
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-6">Layanan</h4>
+                    <ul class="space-y-3">
+                        <li><a href="layanan.html"
+                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Semua
+                                Layanan</a></li>
+                        <li><a href="dokter.html"
+                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Cari Dokter</a>
+                        </li>
+                        <li><a href="artikel.html"
+                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Artikel
+                                Kesehatan</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-6">Perusahaan</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Tentang
+                                Kami</a></li>
+                        <li><a href="#"
+                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Karir</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-6">Hubungi Kami</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-slate-500 dark:text-slate-400">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0"></i>
+                            <span>Jl. Sudirman No. 88, Jakarta Selatan</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 dark:text-slate-400 text-sm">© 2023 HealthLife. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('dokter-container');
+            const loading = document.getElementById('loading');
+
+            loading.classList.remove('hidden');
+
+            fetch('data/dokter.json')
+                .then(response => response.json())
+                .then(data => {
+                    loading.classList.add('hidden');
+                    if (data.length === 0) {
+                        container.innerHTML = '<p class="text-center col-span-full text-slate-500">Tidak ada data dokter.</p>';
+                        return;
+                    }
+                    data.forEach((item, index) => {
+                        const delay = index * 100;
+                        const formattedPrice = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(item.biaya_konsultasi);
+
+                        // Fallback image if needed, though JSON seems to have Valid URLs
+
+                        const html = `
+                             <div class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl p-4 hover:shadow-lg transition text-center reveal active" style="animation-delay: ${delay}ms">
+                                <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+                                    <img src="${item.foto}" alt="${item.nama}" class="w-full h-full rounded-full object-cover">
+                                </div>
+                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">${item.nama}</h3>
+                                <p class="text-primary text-sm font-medium mb-2">${item.spesialisasi}</p>
+                                <div class="flex items-center justify-center gap-1 text-yellow-400 text-sm mb-4">
+                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                    <span class="text-slate-600 dark:text-slate-400 font-medium">${item.rating} (${item.jumlah_pasien}+)</span>
+                                </div>
+                                <div class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl">
+                                    <span class="text-xs font-medium text-slate-500">Mulai dari</span>
+                                    <span class="text-sm font-bold text-slate-800 dark:text-white">${formattedPrice}</span>
+                                </div>
+                                <a href="detail-dokter.html?nama=${encodeURIComponent(item.nama)}" class="block w-full mt-4 bg-primary/10 hover:bg-primary text-primary hover:text-white py-2 rounded-lg font-medium transition text-sm text-center">
+                                    Chat Sekarang
+                                </a>
+                            </div>
+                        `;
+                        container.insertAdjacentHTML('beforeend', html);
+                    });
+                    lucide.createIcons();
+                })
+                .catch(err => {
+                    console.error(err);
+                    loading.classList.add('hidden');
+                    container.innerHTML += `
+                        <div class="col-span-full text-center p-8 bg-red-50 dark:bg-red-900/20 rounded-xl">
+                            <i data-lucide="alert-circle" class="w-12 h-12 text-red-500 mx-auto mb-4"></i>
+                            <h3 class="text-lg font-bold text-red-500 mb-2">Gagal Memuat Data</h3>
+                            <p class="text-slate-600 dark:text-slate-400">Pastikan file <code>data/dokter.json</code> tersedia.</p>
+                        </div>
+                    `;
+                    lucide.createIcons();
+                });
+        });
+    </script>
+</body>
+
+</html>

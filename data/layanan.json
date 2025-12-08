@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Chat Dokter",
+        "icon": "message-square-plus",
+        "iconColorClass": "text-blue-500",
+        "iconBgClass": "bg-blue-50 dark:bg-blue-900/20",
+        "description": "Konsultasi 24 jam dengan dokter umum dan spesialis berpengalaman.",
+        "actionText": "Mulai Konsultasi"
+    },
+    {
+        "title": "Toko Obat",
+        "icon": "pill",
+        "iconColorClass": "text-red-500",
+        "iconBgClass": "bg-red-50 dark:bg-red-900/20",
+        "description": "Beli obat resep atau vitamin, diantar langsung ke rumah Anda.",
+        "actionText": "Belanja Sekarang"
+    },
+    {
+        "title": "Janji Temu RS",
+        "icon": "stethoscope",
+        "iconColorClass": "text-primary",
+        "iconBgClass": "bg-primary/10",
+        "description": "Booking jadwal konsultasi tatap muka di Rumah Sakit terdekat.",
+        "actionText": "Buat Janji"
+    },
+    {
+        "title": "Cek Lab",
+        "icon": "flask-conical",
+        "iconColorClass": "text-purple-500",
+        "iconBgClass": "bg-purple-50 dark:bg-purple-900/20",
+        "description": "Layanan tes laboratorium lengkap dengan hasil yang akurat.",
+        "actionText": "Lihat Paket"
+    }
+]
