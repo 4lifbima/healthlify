@@ -265,11 +265,11 @@
                                         class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition appearance-none"
                                         required>
                                         <option value="" disabled selected>Pilih Lokasi Rumah Sakit</option>
-                                        <option value="rs_jakarta">RS HealthLife Jakarta Pusat</option>
-                                        <option value="rs_selatan">RS HealthLife Jakarta Selatan</option>
-                                        <option value="rs_barat">RS HealthLife Jakarta Barat</option>
-                                        <option value="rs_surabaya">RS HealthLife Surabaya</option>
-                                        <option value="rs_bandung">RS HealthLife Bandung</option>
+                                        <option value="rs_jakarta">RS HealthLife Kota gorontalo</option>
+                                        <option value="rs_selatan">RS HealthLife Bone Bolango</option>
+                                        <option value="rs_barat">RS HealthLife Kab. Gorontalo</option>
+                                        <option value="rs_surabaya">RS HealthLife Kab. Pohuwato</option>
+                                        <option value="rs_bandung">RS HealthLife Kab. Boalemo</option>
                                     </select>
                                     <i data-lucide="chevron-down"
                                         class="absolute right-4 top-3.5 w-5 h-5 text-slate-400 pointer-events-none"></i>
@@ -327,10 +327,14 @@
                         </div>
 
                         <div class="flex items-center gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
-                            <button type="submit"
+                            <button type="submit" id="confirm-button"
                                 class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-primary/30 transition transform active:scale-95 flex items-center gap-2">
                                 <i data-lucide="check-circle" class="w-5 h-5"></i>
-                                Konfirmasi Janji
+                                <span id="button-text">Konfirmasi Janji</span>
+                                <svg id="loading-spinner" class="animate-spin h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
                             </button>
                             <button type="button"
                                 class="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 font-medium px-4 py-4">
@@ -567,7 +571,83 @@
         </div>
     </div>
 
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 z-[100] hidden">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="bg-white dark:bg-card w-full max-w-md rounded-3xl shadow-2xl overflow-hidden transform transition-all scale-100 opacity-100 relative">
+                <div class="p-8">
+                    <div class="text-center mb-6">
+                        <div class="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i data-lucide="check" class="w-8 h-8 text-green-500"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Janji Berhasil Dibuat!</h3>
+                        <p class="text-slate-500 dark:text-slate-400">
+                            Terima kasih <span id="patient-name" class="font-semibold text-primary">Nama Pasien</span>, 
+                            permintaan janji Anda telah berhasil dikirim. Kami akan segera menghubungi Anda untuk konfirmasi lebih lanjut.
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <button id="close-modal" 
+                            class="w-full bg-primary hover:bg-primary-dark text-white py-3 rounded-xl font-bold shadow-lg shadow-primary/30 transition transform active:scale-95">
+                            Tutup
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const confirmButton = document.getElementById('confirm-button');
+            const buttonText = document.getElementById('button-text');
+            const loadingSpinner = document.getElementById('loading-spinner');
+            const successModal = document.getElementById('success-modal');
+            const closeModal = document.getElementById('close-modal');
+            const patientName = document.getElementById('patient-name');
+            
+            confirmButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Get patient name from form
+                const nameInput = document.querySelector('input[type="text"]');
+                const name = nameInput ? nameInput.value || 'Pasien' : 'Pasien';
+                patientName.textContent = name;
+                
+                // Show loading state
+                buttonText.textContent = 'Memproses...';
+                loadingSpinner.classList.remove('hidden');
+                confirmButton.disabled = true;
+                
+                // Simulate API call delay
+                setTimeout(function() {
+                    // Hide loading state
+                    buttonText.textContent = 'Konfirmasi Janji';
+                    loadingSpinner.classList.add('hidden');
+                    confirmButton.disabled = false;
+                    
+                    // Show success modal
+                    successModal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }, 2000);
+            });
+            
+            closeModal.addEventListener('click', function() {
+                successModal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Close modal when clicking outside
+            successModal.addEventListener('click', function(e) {
+                if (e.target === successModal) {
+                    successModal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
