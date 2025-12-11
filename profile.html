@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/icon.png" type="image/png">
-    <title>Artikel Kesehatan - HealthLife</title>
+    <title>Profile - HealthLife</title>
 
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
 <body class="bg-white dark:bg-dark text-slate-800 dark:text-slate-100 transition-colors duration-300">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300 shadow-sm" id="navbar">
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
@@ -45,15 +45,14 @@
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="index.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Beranda</a>
-                    <a href="profile.html"
-                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Profile
-                        Kami</a>
+                    <a href="profile.html" class="text-primary font-medium transition">Profile Kami</a>
                     <a href="layanan.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Layanan</a>
                     <a href="dokter.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Cari
                         Dokter</a>
-                    <a href="artikel.html" class="text-primary font-medium transition">Artikel</a>
+                    <a href="artikel.html"
+                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Artikel</a>
                     <a href="janji-rs.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Buat
                         Janji</a>
@@ -61,6 +60,7 @@
 
                 <!-- Right Actions -->
                 <div class="hidden md:flex items-center space-x-4">
+                    <!-- Dark Mode Toggle -->
                     <button id="theme-toggle"
                         class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-300">
                         <i data-lucide="moon" class="w-5 h-5 hidden dark:block"></i>
@@ -116,8 +116,8 @@
                 Beranda
             </a>
             <a href="profile.html"
-                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
-                <i data-lucide="users" class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-primary bg-primary/5 rounded-xl transition-all font-medium group">
+                <i data-lucide="users" class="w-5 h-5 text-primary group-hover:text-primary transition-colors"></i>
                 Profile Kami
             </a>
             <a href="layanan.html"
@@ -133,8 +133,9 @@
                 Cari Dokter
             </a>
             <a href="artikel.html"
-                class="mobile-link flex items-center gap-3 px-4 py-3 text-primary bg-primary/5 rounded-xl transition-all font-medium group">
-                <i data-lucide="book-open" class="w-5 h-5 text-primary group-hover:text-primary transition-colors"></i>
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                <i data-lucide="book-open"
+                    class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
                 Artikel
             </a>
             <a href="janji-rs.html"
@@ -143,7 +144,9 @@
                     class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
                 Buat Janji
             </a>
+
             <div class="my-6 border-t border-slate-100 dark:border-slate-800"></div>
+
             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider px-4 mb-2">Akun</div>
             <button
                 class="w-full flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-all font-medium login-btn">
@@ -169,54 +172,71 @@
     <section class="pt-32 pb-20 bg-slate-50 dark:bg-[#162032] min-h-screen">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <span class="text-primary font-semibold tracking-wider uppercase text-sm">Blog & Berita</span>
-                <h1 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-slate-900 dark:text-white">Artikel Kesehatan
-                    Terbaru</h1>
+                <span class="text-primary font-semibold tracking-wider uppercase text-sm">Tim Kami</span>
+                <h1 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-slate-900 dark:text-white">Profile Kelompok
+                </h1>
                 <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                    Dapatkan informasi terkini seputar kesehatan, tips gaya hidup sehat, dan berita medis terpercaya.
+                    Mengenal lebih dekat anggota tim yang berdedikasi membangun HealthLife.
                 </p>
-
-                <!-- Filter Categories -->
-                <div class="flex flex-wrap justify-center gap-3 mt-8" id="category-filters">
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-primary text-white font-medium text-sm transition filter-btn active"
-                        data-category="all">Semua</button>
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-card text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary font-medium text-sm transition filter-btn"
-                        data-category="Nutrisi">Nutrisi</button>
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-card text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary font-medium text-sm transition filter-btn"
-                        data-category="Kesehatan Mental">Kesehatan Mental</button>
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-card text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary font-medium text-sm transition filter-btn"
-                        data-category="Hidup Sehat">Hidup Sehat</button>
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-card text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary font-medium text-sm transition filter-btn"
-                        data-category="Tips">Tips</button>
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-card text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary font-medium text-sm transition filter-btn"
-                        data-category="Info Medis">Info Medis</button>
-                </div>
             </div>
 
-            <!-- Changed grid-cols-3 to grid-cols-4 as requested -->
-            <div id="wrapper-artikel" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Loading State -->
-                <div class="col-span-full text-center py-20 hidden" id="loading">
-                    <div
-                        class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-primary border-t-transparent">
-                    </div>
-                    <p class="mt-2 text-slate-500">Memuat artikel...</p>
-                </div>
-            </div>
-
-            <div id="no-results" class="hidden text-center py-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center">
+                <!-- Card 1 -->
                 <div
-                    class="inline-flex items-center justify-center p-4 bg-slate-100 dark:bg-slate-800 rounded-full mb-4">
-                    <i data-lucide="file-question" class="w-8 h-8 text-slate-400"></i>
+                    class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 text-center group">
+                    <div
+                        class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20 p-1 group-hover:border-primary transition-colors">
+                        <img src="https://ui-avatars.com/api/?name=Member+1&background=0D8ABC&color=fff"
+                            alt="Team Member" class="w-full h-full rounded-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-1">Bella Sagita</h3>
+                    <p class="text-primary font-medium">413423059</p>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Tidak Ditemukan</h3>
-                <p class="text-slate-500 dark:text-slate-400 mt-2">Belum ada artikel untuk kategori ini.</p>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 text-center group">
+                    <div
+                        class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20 p-1 group-hover:border-primary transition-colors">
+                        <img src="https://ui-avatars.com/api/?name=Member+2&background=0D8ABC&color=fff"
+                            alt="Team Member" class="w-full h-full rounded-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-1">Anggota 2</h3>
+                    <p class="text-primary font-medium">413423060</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 text-center group">
+                    <div
+                        class="w-40 h-40 mx-auto mb-6 rounded-full overflow-hidden border-4 border-primary/20 p-1 group-hover:border-primary transition-colors">
+                        <img src="https://ui-avatars.com/api/?name=Member+3&background=0D8ABC&color=fff"
+                            alt="Team Member" class="w-full h-full rounded-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-1">Anggota 3</h3>
+                    <p class="text-primary font-medium">413423061</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="py-12 bg-white dark:bg-[#1a2439] border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center">
+                <i data-lucide="alert-triangle" class="w-14 h-14 mb-3 bg-yellow-100 p-2 rounded-xl text-yellow-600 border-2 border-yellow-400 mx-auto"></i>
+                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Disclaimer</h2>
+                <div class="prose prose-lg prose-slate dark:prose-invert mx-auto">
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+                        Website ini dibuat semata-mata sebagai bagian dari tugas mata kuliah Web Desain. Segala konten, informasi, dan fitur yang tersedia dalam website ini ditujukan hanya untuk memenuhi persyaratan akademik dan tidak dimaksudkan untuk digunakan dalam konteks profesional atau komersial. 
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed mt-4">
+                        Kami ingin menegaskan bahwa seluruh materi dalam website ini merupakan hasil karya akademik yang dikembangkan dalam lingkup pembelajaran. Setiap referensi atau sumber daya eksternal yang digunakan telah dipelajari dan diimplementasikan sesuai dengan prinsip pendidikan serta etika akademik yang berlaku. 
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed mt-4">
+                        Dengan mengunjungi website ini, pengguna memahami dan menyetujui bahwa website ini tidak menyediakan layanan kesehatan nyata, tidak terhubung dengan penyedia layanan medis profesional, dan tidak boleh dijadikan acuan untuk pengambilan keputusan dalam bidang kesehatan. Penggunaan informasi sepenuhnya menjadi tanggung jawab individu masing-masing.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -436,114 +456,6 @@
     </div>
 
     <script src="assets/js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.getElementById('wrapper-artikel');
-            const loading = document.getElementById('loading');
-            const noResults = document.getElementById('no-results');
-            const filterBtns = document.querySelectorAll('.filter-btn');
-
-            let allArticles = [];
-
-            // Show loading initially
-            if (loading) loading.classList.remove('hidden');
-
-            fetch('data/artikel.json')
-                .then(response => response.json())
-                .then(data => {
-                    allArticles = data;
-                    renderArticles(data);
-                    // Hide loading
-                    if (loading) loading.classList.add('hidden');
-                })
-                .catch(err => {
-                    console.error(err);
-                    if (loading) loading.classList.add('hidden');
-                    container.innerHTML = `
-                        <div class="col-span-full text-center p-8 bg-red-50 dark:bg-red-900/20 rounded-xl">
-                            <i data-lucide="alert-circle" class="w-12 h-12 text-red-500 mx-auto mb-4"></i>
-                            <h3 class="text-lg font-bold text-red-500 mb-2">Gagal Memuat Data</h3>
-                            <p class="text-slate-600 dark:text-slate-400">Pastikan file <code>data/artikel.json</code> tersedia.</p>
-                        </div>
-                    `;
-                    lucide.createIcons();
-                });
-
-            function renderArticles(articles) {
-                container.innerHTML = '';
-
-                if (articles.length === 0) {
-                    noResults.classList.remove('hidden');
-                    return;
-                } else {
-                    noResults.classList.add('hidden');
-                }
-
-                articles.forEach((artikel, index) => {
-                    const delay = index * 100;
-                    // Provide defaults
-                    const readTime = artikel.read_time || '5';
-
-                    const html = `
-                        <article class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col h-full reveal active" style="animation-delay: ${delay}ms">
-                            <div class="relative h-48 overflow-hidden">
-                                <img src="${artikel.gambar}" alt="${artikel.judul}" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                                <div class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary uppercase tracking-wide">
-                                    ${artikel.kategori}
-                                </div>
-                            </div>
-                            <div class="p-6 flex flex-col flex-1">
-                                <div class="flex items-center text-xs text-slate-500 dark:text-slate-400 mb-3 gap-2">
-                                    <i data-lucide="calendar" class="w-3 h-3"></i>
-                                    <span>${artikel.tanggal}</span>
-                                    <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
-                                    <i data-lucide="clock" class="w-3 h-3"></i>
-                                    <span>${readTime} min read</span>
-                                </div>
-                                <h3 class="font-bold text-xl mb-3 text-slate-900 dark:text-white leading-tight group-hover:text-primary transition line-clamp-2">
-                                    ${artikel.judul}
-                                </h3>
-                                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3 flex-1">
-                                    ${artikel.deskripsi}
-                                </p>
-                                <a href="detail-artikel.html?slug=${artikel.slug}" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all mt-auto self-start">
-                                    Baca Selengkapnya <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-                        </article>
-                    `;
-                    container.insertAdjacentHTML('beforeend', html);
-                });
-                lucide.createIcons();
-            }
-
-            // Filter Logic
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Update Active State
-                    filterBtns.forEach(b => {
-                        b.classList.remove('bg-primary', 'text-white', 'border-transparent');
-                        b.classList.add('bg-white', 'dark:bg-card', 'text-slate-600', 'dark:text-slate-400', 'border-slate-200', 'dark:border-slate-700');
-                    });
-                    btn.classList.remove('bg-white', 'dark:bg-card', 'text-slate-600', 'dark:text-slate-400', 'border-slate-200', 'dark:border-slate-700');
-                    btn.classList.add('bg-primary', 'text-white', 'border-transparent');
-
-                    const category = btn.getAttribute('data-category');
-
-                    if (category === 'all') {
-                        renderArticles(allArticles);
-                    } else {
-                        // Loose matching for filter buttons vs data categories
-                        const filtered = allArticles.filter(art => {
-                            return (art.kategori && art.kategori.toLowerCase().includes(category.toLowerCase())) ||
-                                (category && category.toLowerCase().includes(art.kategori.toLowerCase()));
-                        });
-                        renderArticles(filtered);
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>

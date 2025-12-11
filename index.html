@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +18,8 @@
     <link rel="apple-touch-icon" href="assets/img/icon.png" sizes="180x180">
     <title>HealthLife - Solusi Kesehatan Modern</title>
     <meta name="description" content="HealthLife - Solusi kesehatan modern untuk kebutuhan medis Anda.">
-    <meta name="keywords" content="kesehatan, medis, dokter, perawatan, obat, wellness, fitness, health, life, modern, solusi, kebutuhan, pasien, kesehatan mental, kesehatan fisik, keseimbangan, gaya hidup sehat, klinik, rumah sakit, pemeriksaan, diagnosis, pengobatan, resep,apotek, layanan kesehatan, jasa kesehatan, kesehatan komunitas, kesehatan lingkungan, kesehatan mental, kesehatan fisik, keseimbangan, gaya hidup sehat, klinik, rumah sakit, pemeriksaan, diagnosis, pengobatan, resep, apotek, layanan kesehatan, jasa kesehatan, kesehatan komunitas, kesehatan lingkungan">
+    <meta name="keywords"
+        content="kesehatan, medis, dokter, perawatan, obat, wellness, fitness, health, life, modern, solusi, kebutuhan, pasien, kesehatan mental, kesehatan fisik, keseimbangan, gaya hidup sehat, klinik, rumah sakit, pemeriksaan, diagnosis, pengobatan, resep,apotek, layanan kesehatan, jasa kesehatan, kesehatan komunitas, kesehatan lingkungan, kesehatan mental, kesehatan fisik, keseimbangan, gaya hidup sehat, klinik, rumah sakit, pemeriksaan, diagnosis, pengobatan, resep, apotek, layanan kesehatan, jasa kesehatan, kesehatan komunitas, kesehatan lingkungan">
     <meta name="author" content="HealthLife Team">
 
     <!-- MMeta OG -->
@@ -79,8 +81,10 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#beranda"
-                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Beranda</a>
+                    <a href="index.html" class="text-primary font-medium transition">Beranda</a>
+                    <a href="profile.html"
+                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Profile
+                        Kami</a>
                     <a href="layanan.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Layanan</a>
                     <a href="dokter.html"
@@ -88,6 +92,9 @@
                         Dokter</a>
                     <a href="artikel.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Artikel</a>
+                    <a href="janji-rs.html"
+                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Buat
+                        Janji</a>
                 </div>
 
                 <!-- Right Actions -->
@@ -99,20 +106,23 @@
                         <i data-lucide="sun" class="w-5 h-5 block dark:hidden"></i>
                     </button>
 
-                    <a href="#" class="text-slate-600 dark:text-slate-300 font-medium hover:text-primary">Masuk</a>
-                    <a href="#"
-                        class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full font-semibold transition shadow-lg shadow-primary/30 hover:shadow-primary/50 flex items-center gap-2">
+                    <button
+                        class="text-slate-600 dark:text-slate-300 font-medium hover:text-primary login-btn">Masuk</button>
+                    <button
+                        class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full font-semibold transition shadow-lg shadow-primary/30 hover:shadow-primary/50 flex items-center gap-2 register-btn">
                         Daftar
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center gap-4">
-                    <button id="theme-toggle-mobile" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-300">
+                    <button id="theme-toggle-mobile"
+                        class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-300">
                         <i data-lucide="moon" class="w-5 h-5 hidden dark:block"></i>
                         <i data-lucide="sun" class="w-5 h-5 block dark:hidden"></i>
                     </button>
-                    <button id="mobile-menu-btn" class="text-slate-600 dark:text-slate-300 hover:text-primary transition">
+                    <button id="mobile-menu-btn"
+                        class="text-slate-600 dark:text-slate-300 hover:text-primary transition">
                         <i data-lucide="menu" class="w-8 h-8"></i>
                     </button>
                 </div>
@@ -120,19 +130,22 @@
         </div>
     </nav>
 
-<!-- Mobile Sidebar (Fixed & Improved) -->
+    <!-- Mobile Sidebar (Fixed & Improved) -->
     <!-- Z-index 60 ensures it sits above the navbar (z-50) -->
-    <div id="mobile-menu" class="fixed inset-y-0 right-0 w-[85%] max-w-xs bg-white/95 dark:bg-[#0f172a]/95 backdrop-blur-xl shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-[60] flex flex-col h-full md:hidden border-l border-slate-100 dark:border-slate-800">
-        
+    <div id="mobile-menu"
+        class="fixed inset-y-0 right-0 w-[85%] max-w-xs bg-white/95 dark:bg-[#0f172a]/95 backdrop-blur-xl shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-[60] flex flex-col h-full md:hidden border-l border-slate-100 dark:border-slate-800">
+
         <!-- Sidebar Header -->
-        <div class="p-6 flex justify-between items-center border-b border-slate-100 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50">
+        <div
+            class="p-6 flex justify-between items-center border-b border-slate-100 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50">
             <div class="flex items-center gap-2">
                 <div class="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center text-primary">
                     <i data-lucide="heart-pulse" class="w-5 h-5"></i>
                 </div>
                 <span class="text-lg font-bold text-slate-900 dark:text-white">HealthLife</span>
             </div>
-            <button id="close-menu-btn" class="p-2 rounded-full hover:bg-red-50 hover:text-red-500 text-slate-500 transition-colors">
+            <button id="close-menu-btn"
+                class="p-2 rounded-full hover:bg-red-50 hover:text-red-500 text-slate-500 transition-colors">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
         </div>
@@ -140,630 +153,757 @@
         <!-- Sidebar Content -->
         <div class="flex-1 overflow-y-auto py-6 px-4 space-y-2">
             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider px-4 mb-2">Menu Utama</div>
-            
-            <a href="#beranda" class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+
+            <a href="#beranda"
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
                 <i data-lucide="home" class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
                 Beranda
             </a>
-            <a href="layanan.html" class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
-                <i data-lucide="stethoscope" class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+            <a href="profile.html"
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                <i data-lucide="users" class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+                Profile Kami
+            </a>
+            <a href="layanan.html"
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                <i data-lucide="stethoscope"
+                    class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
                 Layanan
             </a>
-            <a href="dokter.html" class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
-                <i data-lucide="user-plus" class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+            <a href="dokter.html"
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                <i data-lucide="user-plus"
+                    class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
                 Cari Dokter
             </a>
-            <a href="artikel.html" class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
-                <i data-lucide="book-open" class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+            <a href="artikel.html"
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                <i data-lucide="book-open"
+                    class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
                 Artikel
+            </a>
+            <a href="janji-rs.html"
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                <i data-lucide="calendar-heart"
+                    class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+                Buat Janji
             </a>
 
             <div class="my-6 border-t border-slate-100 dark:border-slate-800"></div>
 
             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider px-4 mb-2">Akun</div>
-            <a href="#" class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-all font-medium">
+            <button
+                class="w-full flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-all font-medium login-btn">
                 <i data-lucide="log-in" class="w-5 h-5 text-slate-400"></i>
                 Masuk
-            </a>
+            </button>
         </div>
 
         <!-- Sidebar Footer -->
         <div class="p-6 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
-            <a href="#" class="block w-full bg-primary hover:bg-primary-dark text-white text-center py-3.5 rounded-xl font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+            <button
+                class="block w-full bg-primary hover:bg-primary-dark text-white text-center py-3.5 rounded-xl font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95 register-btn">
                 Daftar Sekarang
-            </a>
-            <p class="text-center text-xs text-slate-400 mt-4">© 2023 HealthLife App</p>
+            </button>
+            <p class="text-center text-xs text-slate-400 mt-4">© 2025 HealthLife App</p>
         </div>
     </div>
 
     <!-- Overlay with improved backdrop blur and z-index -->
-    <div id="overlay" class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[55] hidden transition-opacity duration-300 md:hidden"></div>
+    <div id="overlay"
+        class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[55] hidden transition-opacity duration-300 md:hidden">
+    </div>
 
-                <!-- Hero Section -->
-                <section id="beranda" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-grid">
-                    <!-- Background Blobs -->
+    <!-- Hero Section -->
+    <section id="beranda" class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-grid">
+        <!-- Background Blobs -->
+        <div
+            class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary/20 blur-3xl filter opacity-50 animate-blob">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-400/20 blur-3xl filter opacity-50 animate-blob animation-delay-2000">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="text-center lg:text-left reveal active">
                     <div
-                        class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-primary/20 blur-3xl filter opacity-50 animate-blob">
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light/50 dark:bg-primary/10 text-primary-dark dark:text-primary font-semibold text-sm mb-6 border border-primary/20">
+                        <span class="relative flex h-3 w-3">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                        </span>
+                        Platform Kesehatan Terpercaya No. 1
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+                        Kesehatan Anda Adalah <br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-600">Prioritas
+                            Kami</span>
+                    </h1>
+                    <p
+                        class="text-slate-600 dark:text-slate-400 text-lg mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Konsultasi dengan dokter spesialis, beli obat, dan cek lab kini lebih mudah, cepat,
+                        dan aman dari kenyamanan rumah Anda.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#"
+                            class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold transition shadow-xl shadow-primary/30 flex items-center justify-center gap-2 group">
+                            Chat Dokter Sekarang
+                            <i data-lucide="arrow-right"
+                                class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#"
+                            class="bg-white dark:bg-slate-800 text-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 px-8 py-4 rounded-xl font-bold hover:shadow-lg transition flex items-center justify-center gap-2">
+                            <i data-lucide="calendar" class="w-5 h-5 text-primary"></i>
+                            Buat Janji RS
+                        </a>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="mt-12 grid grid-cols-3 gap-6 border-t border-slate-200 dark:border-slate-800 pt-8">
+                        <div>
+                            <h3 class="text-3xl font-bold text-slate-900 dark:text-white">20rb+</h3>
+                            <p class="text-sm text-slate-500">Dokter Aktif</p>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-slate-900 dark:text-white">5jt+</h3>
+                            <p class="text-sm text-slate-500">Pasien Sembuh</p>
+                        </div>
+                        <div>
+                            <h3 class="text-3xl font-bold text-slate-900 dark:text-white">99%</h3>
+                            <p class="text-sm text-slate-500">Kepuasan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image / Visual -->
+                <div class="relative lg:h-[600px] flex items-center justify-center reveal delay-200">
+                    <!-- Abstract geometric background -->
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-blue-500/10 rounded-full blur-3xl transform rotate-12">
+                    </div>
+
+                    <!-- Main Image Container -->
+                    <div class="relative w-full max-w-md animate-float">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Doctor"
+                            class="rounded-3xl shadow-2xl shadow-primary/20 object-cover w-full h-[500px] z-10 border-4 border-white dark:border-slate-700">
+
+                        <!-- Floating Card 1: Heart Rate -->
+                        <div class="absolute -left-8 top-20 bg-white dark:bg-card p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 flex items-center gap-4 animate-float"
+                            style="animation-delay: 1s;">
+                            <div
+                                class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center text-red-500">
+                                <i data-lucide="heart" class="w-6 h-6 fill-current"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500">Heart Rate</p>
+                                <p class="text-lg font-bold text-slate-800 dark:text-white">98 bpm</p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Card 2: Safe -->
+                        <div class="absolute -right-8 bottom-32 bg-white dark:bg-card p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 flex items-center gap-4 animate-float"
+                            style="animation-delay: 2s;">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                                <i data-lucide="shield-check" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500">Status</p>
+                                <p class="text-lg font-bold text-slate-800 dark:text-white">Verified</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Services -->
+    <section id="layanan" class="py-20 bg-slate-50 dark:bg-[#162032]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="text-primary font-semibold tracking-wider uppercase text-sm">Layanan
+                    Kami</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-slate-900 dark:text-white">Solusi
+                    Kesehatan Terlengkap</h2>
+                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                    Akses berbagai layanan kesehatan dengan mudah dalam satu aplikasi yang terintegrasi.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service Card 1 -->
+                <div
+                    class="group bg-white dark:bg-card p-8 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border border-slate-100 dark:border-slate-800 relative overflow-hidden reveal">
+                    <div
+                        class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition transform group-hover:scale-110">
+                        <i data-lucide="message-circle" class="w-24 h-24 text-primary"></i>
                     </div>
                     <div
-                        class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-blue-400/20 blur-3xl filter opacity-50 animate-blob animation-delay-2000">
+                        class="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center text-blue-500 mb-6 group-hover:scale-110 transition">
+                        <i data-lucide="message-square-plus" class="w-7 h-7"></i>
                     </div>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Chat Dokter</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Konsultasi 24 jam dengan
+                        dokter umum dan spesialis berpengalaman.</p>
+                    <a href="detail-layanan.html?id=chat-dokter"
+                        class="text-primary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Mulai Konsultasi <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
 
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div class="grid lg:grid-cols-2 gap-12 items-center">
-                            <!-- Text Content -->
-                            <div class="text-center lg:text-left reveal active">
-                                <div
-                                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-light/50 dark:bg-primary/10 text-primary-dark dark:text-primary font-semibold text-sm mb-6 border border-primary/20">
-                                    <span class="relative flex h-3 w-3">
-                                        <span
-                                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                                        <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
-                                    </span>
-                                    Platform Kesehatan Terpercaya No. 1
-                                </div>
-                                <h1 class="text-4xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-6">
-                                    Kesehatan Anda Adalah <br>
-                                    <span
-                                        class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-600">Prioritas
-                                        Kami</span>
-                                </h1>
-                                <p
-                                    class="text-slate-600 dark:text-slate-400 text-lg mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                                    Konsultasi dengan dokter spesialis, beli obat, dan cek lab kini lebih mudah, cepat,
-                                    dan aman dari kenyamanan rumah Anda.
-                                </p>
-                                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                                    <a href="#"
-                                        class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold transition shadow-xl shadow-primary/30 flex items-center justify-center gap-2 group">
-                                        Chat Dokter Sekarang
-                                        <i data-lucide="arrow-right"
-                                            class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
-                                    </a>
-                                    <a href="#"
-                                        class="bg-white dark:bg-slate-800 text-slate-700 dark:text-white border border-slate-200 dark:border-slate-700 px-8 py-4 rounded-xl font-bold hover:shadow-lg transition flex items-center justify-center gap-2">
-                                        <i data-lucide="calendar" class="w-5 h-5 text-primary"></i>
-                                        Buat Janji RS
-                                    </a>
-                                </div>
-
-                                <!-- Stats -->
-                                <div
-                                    class="mt-12 grid grid-cols-3 gap-6 border-t border-slate-200 dark:border-slate-800 pt-8">
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-slate-900 dark:text-white">20rb+</h3>
-                                        <p class="text-sm text-slate-500">Dokter Aktif</p>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-slate-900 dark:text-white">5jt+</h3>
-                                        <p class="text-sm text-slate-500">Pasien Sembuh</p>
-                                    </div>
-                                    <div>
-                                        <h3 class="text-3xl font-bold text-slate-900 dark:text-white">99%</h3>
-                                        <p class="text-sm text-slate-500">Kepuasan</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Hero Image / Visual -->
-                            <div class="relative lg:h-[600px] flex items-center justify-center reveal delay-200">
-                                <!-- Abstract geometric background -->
-                                <div
-                                    class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-blue-500/10 rounded-full blur-3xl transform rotate-12">
-                                </div>
-
-                                <!-- Main Image Container -->
-                                <div class="relative w-full max-w-md animate-float">
-                                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                        alt="Doctor"
-                                        class="rounded-3xl shadow-2xl shadow-primary/20 object-cover w-full h-[500px] z-10 border-4 border-white dark:border-slate-700">
-
-                                    <!-- Floating Card 1: Heart Rate -->
-                                    <div class="absolute -left-8 top-20 bg-white dark:bg-card p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 flex items-center gap-4 animate-float"
-                                        style="animation-delay: 1s;">
-                                        <div
-                                            class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center text-red-500">
-                                            <i data-lucide="heart" class="w-6 h-6 fill-current"></i>
-                                        </div>
-                                        <div>
-                                            <p class="text-xs text-slate-500">Heart Rate</p>
-                                            <p class="text-lg font-bold text-slate-800 dark:text-white">98 bpm</p>
-                                        </div>
-                                    </div>
-
-                                    <!-- Floating Card 2: Safe -->
-                                    <div class="absolute -right-8 bottom-32 bg-white dark:bg-card p-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-700 flex items-center gap-4 animate-float"
-                                        style="animation-delay: 2s;">
-                                        <div
-                                            class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                                            <i data-lucide="shield-check" class="w-6 h-6"></i>
-                                        </div>
-                                        <div>
-                                            <p class="text-xs text-slate-500">Status</p>
-                                            <p class="text-lg font-bold text-slate-800 dark:text-white">Verified</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Service Card 2 -->
+                <div
+                    class="group bg-white dark:bg-card p-8 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border border-slate-100 dark:border-slate-800 relative overflow-hidden reveal delay-100">
+                    <div
+                        class="w-14 h-14 bg-red-50 dark:bg-red-900/20 rounded-xl flex items-center justify-center text-red-500 mb-6 group-hover:scale-110 transition">
+                        <i data-lucide="pill" class="w-7 h-7"></i>
                     </div>
-                </section>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Toko Obat</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Beli obat resep atau vitamin,
+                        diantar langsung ke rumah Anda.</p>
+                    <a href="detail-layanan.html?id=toko-obat"
+                        class="text-primary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Belanja Sekarang <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
 
-                <!-- Popular Services -->
-                <section id="layanan" class="py-20 bg-slate-50 dark:bg-[#162032]">
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div class="text-center mb-16 reveal">
-                            <span class="text-primary font-semibold tracking-wider uppercase text-sm">Layanan
-                                Kami</span>
-                            <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-slate-900 dark:text-white">Solusi
-                                Kesehatan Terlengkap</h2>
-                            <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                                Akses berbagai layanan kesehatan dengan mudah dalam satu aplikasi yang terintegrasi.
-                            </p>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                            <!-- Service Card 1 -->
-                            <div
-                                class="group bg-white dark:bg-card p-8 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border border-slate-100 dark:border-slate-800 relative overflow-hidden reveal">
-                                <div
-                                    class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition transform group-hover:scale-110">
-                                    <i data-lucide="message-circle" class="w-24 h-24 text-primary"></i>
-                                </div>
-                                <div
-                                    class="w-14 h-14 bg-blue-50 dark:bg-blue-900/20 rounded-xl flex items-center justify-center text-blue-500 mb-6 group-hover:scale-110 transition">
-                                    <i data-lucide="message-square-plus" class="w-7 h-7"></i>
-                                </div>
-                                <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Chat Dokter</h3>
-                                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Konsultasi 24 jam dengan
-                                    dokter umum dan spesialis berpengalaman.</p>
-                                <a href="#"
-                                    class="text-primary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                                    Mulai Konsultasi <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-
-                            <!-- Service Card 2 -->
-                            <div
-                                class="group bg-white dark:bg-card p-8 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border border-slate-100 dark:border-slate-800 relative overflow-hidden reveal delay-100">
-                                <div
-                                    class="w-14 h-14 bg-red-50 dark:bg-red-900/20 rounded-xl flex items-center justify-center text-red-500 mb-6 group-hover:scale-110 transition">
-                                    <i data-lucide="pill" class="w-7 h-7"></i>
-                                </div>
-                                <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Toko Obat</h3>
-                                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Beli obat resep atau vitamin,
-                                    diantar langsung ke rumah Anda.</p>
-                                <a href="#"
-                                    class="text-primary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                                    Belanja Sekarang <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-
-                            <!-- Service Card 3 -->
-                            <div
-                                class="group bg-white dark:bg-card p-8 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border border-slate-100 dark:border-slate-800 relative overflow-hidden reveal delay-200">
-                                <div
-                                    class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition">
-                                    <i data-lucide="stethoscope" class="w-7 h-7"></i>
-                                </div>
-                                <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Janji Temu RS</h3>
-                                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Booking jadwal konsultasi
-                                    tatap muka di Rumah Sakit terdekat.</p>
-                                <a href="#"
-                                    class="text-primary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                                    Buat Janji <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-
-                            <!-- Service Card 4 -->
-                            <div
-                                class="group bg-white dark:bg-card p-8 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border border-slate-100 dark:border-slate-800 relative overflow-hidden reveal delay-300">
-                                <div
-                                    class="w-14 h-14 bg-purple-50 dark:bg-purple-900/20 rounded-xl flex items-center justify-center text-purple-500 mb-6 group-hover:scale-110 transition">
-                                    <i data-lucide="flask-conical" class="w-7 h-7"></i>
-                                </div>
-                                <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Cek Lab</h3>
-                                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Layanan tes laboratorium
-                                    lengkap dengan hasil yang akurat.</p>
-                                <a href="#"
-                                    class="text-primary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
-                                    Lihat Paket <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-                        </div>
+                <!-- Service Card 3 -->
+                <div
+                    class="group bg-white dark:bg-card p-8 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border border-slate-100 dark:border-slate-800 relative overflow-hidden reveal delay-200">
+                    <div
+                        class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition">
+                        <i data-lucide="stethoscope" class="w-7 h-7"></i>
                     </div>
-                </section>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Janji Temu RS</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Booking jadwal konsultasi
+                        tatap muka di Rumah Sakit terdekat.</p>
+                    <a href="detail-layanan.html?id=janji-temu-rs"
+                        class="text-primary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Buat Janji <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
 
-                <!-- Meet Our Experts -->
-                <section id="dokter" class="py-20 bg-white dark:bg-dark relative overflow-hidden">
-                    <!-- Decoration -->
-                    <div class="absolute -left-40 top-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
-
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-                        <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
-                            <div>
-                                <span class="text-primary font-semibold tracking-wider uppercase text-sm">Dokter
-                                    Spesialis</span>
-                                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-slate-900 dark:text-white">Mitra
-                                    Dokter Terbaik</h2>
-                            </div>
-                            <a href="#"
-                                class="hidden md:flex text-primary font-medium hover:underline gap-1 items-center mt-4 md:mt-0">
-                                Lihat Semua Dokter <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                            </a>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                            <!-- Doctor Card 1 -->
-                            <div
-                                class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl p-4 hover:shadow-lg transition text-center reveal">
-                                <div
-                                    class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary/20 p-1">
-                                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                                        alt="Doctor" class="w-full h-full rounded-full object-cover">
-                                </div>
-                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">dr. Sarah Wijaya</h3>
-                                <p class="text-primary text-sm font-medium mb-2">Spesialis Anak</p>
-                                <div class="flex items-center justify-center gap-1 text-yellow-400 text-sm mb-4">
-                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                    <span class="text-slate-600 dark:text-slate-400 font-medium">4.9 (1.2k)</span>
-                                </div>
-                                <div
-                                    class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl">
-                                    <span class="text-xs font-medium text-slate-500">Mulai dari</span>
-                                    <span class="text-sm font-bold text-slate-800 dark:text-white">Rp 50.000</span>
-                                </div>
-                                <a href="detail-dokter.html?nama=dr.%20Sarah%20Wijaya"
-                                    class="block w-full mt-4 bg-primary/10 hover:bg-primary text-primary hover:text-white py-2 rounded-lg font-medium transition text-sm text-center">Chat
-                                    Sekarang</a>
-                            </div>
-
-                            <!-- Doctor Card 2 -->
-                            <div
-                                class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl p-4 hover:shadow-lg transition text-center reveal delay-100">
-                                <div
-                                    class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary/20 p-1">
-                                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                                        alt="Doctor" class="w-full h-full rounded-full object-cover">
-                                </div>
-                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">dr. Budi Santoso</h3>
-                                <p class="text-primary text-sm font-medium mb-2">Spesialis Jantung</p>
-                                <div class="flex items-center justify-center gap-1 text-yellow-400 text-sm mb-4">
-                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                    <span class="text-slate-600 dark:text-slate-400 font-medium">5.0 (850)</span>
-                                </div>
-                                <div
-                                    class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl">
-                                    <span class="text-xs font-medium text-slate-500">Mulai dari</span>
-                                    <span class="text-sm font-bold text-slate-800 dark:text-white">Rp 85.000</span>
-                                </div>
-                                <a href="detail-dokter.html?nama=dr.%20Budi%20Santoso"
-                                    class="block w-full mt-4 bg-primary/10 hover:bg-primary text-primary hover:text-white py-2 rounded-lg font-medium transition text-sm text-center">Chat
-                                    Sekarang</a>
-                            </div>
-
-                            <!-- Doctor Card 3 -->
-                            <div
-                                class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl p-4 hover:shadow-lg transition text-center reveal delay-200">
-                                <div
-                                    class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary/20 p-1">
-                                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                                        alt="Doctor" class="w-full h-full rounded-full object-cover">
-                                </div>
-                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">dr. Amanda Lee</h3>
-                                <p class="text-primary text-sm font-medium mb-2">Spesialis Kulit</p>
-                                <div class="flex items-center justify-center gap-1 text-yellow-400 text-sm mb-4">
-                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                    <span class="text-slate-600 dark:text-slate-400 font-medium">4.8 (2.1k)</span>
-                                </div>
-                                <div
-                                    class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl">
-                                    <span class="text-xs font-medium text-slate-500">Mulai dari</span>
-                                    <span class="text-sm font-bold text-slate-800 dark:text-white">Rp 60.000</span>
-                                </div>
-                                <a href="detail-dokter.html?nama=dr.%20Amanda%20Lee"
-                                    class="block w-full mt-4 bg-primary/10 hover:bg-primary text-primary hover:text-white py-2 rounded-lg font-medium transition text-sm text-center">Chat
-                                    Sekarang</a>
-                            </div>
-
-                            <!-- Doctor Card 4 -->
-                            <div
-                                class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl p-4 hover:shadow-lg transition text-center reveal delay-300">
-                                <div
-                                    class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary/20 p-1">
-                                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
-                                        alt="Doctor" class="w-full h-full rounded-full object-cover">
-                                </div>
-                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">dr. Kevin Lim</h3>
-                                <p class="text-primary text-sm font-medium mb-2">Psikolog Klinis</p>
-                                <div class="flex items-center justify-center gap-1 text-yellow-400 text-sm mb-4">
-                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                    <span class="text-slate-600 dark:text-slate-400 font-medium">4.9 (980)</span>
-                                </div>
-                                <div
-                                    class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl">
-                                    <span class="text-xs font-medium text-slate-500">Mulai dari</span>
-                                    <span class="text-sm font-bold text-slate-800 dark:text-white">Rp 75.000</span>
-                                </div>
-                                <a href="detail-dokter.html?nama=dr.%20Kevin%20Lim"
-                                    class="block w-full mt-4 bg-primary/10 hover:bg-primary text-primary hover:text-white py-2 rounded-lg font-medium transition text-sm text-center">Chat
-                                    Sekarang</a>
-                            </div>
-                        </div>
-
-                        <div class="mt-8 text-center md:hidden">
-                            <a href="#" class="text-primary font-medium hover:underline inline-flex items-center gap-1">
-                                Lihat Semua Dokter <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                            </a>
-                        </div>
+                <!-- Service Card 4 -->
+                <div
+                    class="group bg-white dark:bg-card p-8 rounded-2xl shadow-sm hover:shadow-xl hover:shadow-primary/10 transition-all duration-300 border border-slate-100 dark:border-slate-800 relative overflow-hidden reveal delay-300">
+                    <div
+                        class="w-14 h-14 bg-purple-50 dark:bg-purple-900/20 rounded-xl flex items-center justify-center text-purple-500 mb-6 group-hover:scale-110 transition">
+                        <i data-lucide="flask-conical" class="w-7 h-7"></i>
                     </div>
-                </section>
+                    <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white">Cek Lab</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-4">Layanan tes laboratorium
+                        lengkap dengan hasil yang akurat.</p>
+                    <a href="detail-layanan.html?id=cek-lab"
+                        class="text-primary font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Lihat Paket <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Articles Section -->
-                <section id="artikel" class="py-20 bg-slate-50 dark:bg-[#162032]">
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div class="text-center mb-16 reveal">
-                            <span class="text-primary font-semibold tracking-wider uppercase text-sm">Edukasi</span>
-                            <h2 class="text-3xl md:text-4xl font-bold mt-2 text-slate-900 dark:text-white">Artikel
-                                Kesehatan Terbaru</h2>
-                        </div>
+    <!-- Meet Our Experts -->
+    <section id="dokter" class="py-20 bg-white dark:bg-dark relative overflow-hidden">
+        <!-- Decoration -->
+        <div class="absolute -left-40 top-40 w-80 h-80 bg-primary/5 rounded-full blur-3xl"></div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            <!-- Article 1 -->
-                            <article
-                                class="bg-white dark:bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group reveal">
-                                <div class="relative h-48 overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                                        alt="Food"
-                                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                                    <div
-                                        class="absolute top-4 left-4 bg-white/90 dark:bg-black/70 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary">
-                                        Nutrisi</div>
-                                </div>
-                                <div class="p-6">
-                                    <h3
-                                        class="font-bold text-lg mb-2 text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary transition">
-                                        10 Makanan Super untuk Meningkatkan Imunitas</h3>
-                                    <p class="text-slate-500 text-sm line-clamp-2 mb-4">Menjaga daya tahan tubuh sangat
-                                        penting, berikut adalah daftar makanan...</p>
-                                    <a href="detail-artikel.html?slug=10-makanan-super-untuk-meningkatkan-imunitas"
-                                        class="text-sm font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-2">Baca
-                                        Selengkapnya <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
-                                </div>
-                            </article>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+                <div>
+                    <span class="text-primary font-semibold tracking-wider uppercase text-sm">Dokter
+                        Spesialis</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 text-slate-900 dark:text-white">Mitra
+                        Dokter Terbaik</h2>
+                </div>
+                <a href="dokter.html"
+                    class="hidden md:flex text-primary font-medium hover:underline gap-1 items-center mt-4 md:mt-0">
+                    Lihat Semua Dokter <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
 
-                            <!-- Article 2 -->
-                            <article
-                                class="bg-white dark:bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group reveal delay-100">
-                                <div class="relative h-48 overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                                        alt="Yoga"
-                                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                                    <div
-                                        class="absolute top-4 left-4 bg-white/90 dark:bg-black/70 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary">
-                                        Hidup Sehat</div>
-                                </div>
-                                <div class="p-6">
-                                    <h3
-                                        class="font-bold text-lg mb-2 text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary transition">
-                                        Manfaat Olahraga Pagi Bagi Kesehatan Mental</h3>
-                                    <p class="text-slate-500 text-sm line-clamp-2 mb-4">Memulai hari dengan olahraga
-                                        ringan dapat mengurangi stress...</p>
-                                    <a href="detail-artikel.html?slug=manfaat-olahraga-pagi-bagi-kesehatan-mental"
-                                        class="text-sm font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-2">Baca
-                                        Selengkapnya <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
-                                </div>
-                            </article>
-
-                            <!-- Article 3 -->
-                            <article
-                                class="bg-white dark:bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group reveal delay-200">
-                                <div class="relative h-48 overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1584362917165-526a968579e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                                        alt="Sleep"
-                                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                                    <div
-                                        class="absolute top-4 left-4 bg-white/90 dark:bg-black/70 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary">
-                                        Tips</div>
-                                </div>
-                                <div class="p-6">
-                                    <h3
-                                        class="font-bold text-lg mb-2 text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary transition">
-                                        Pola Tidur yang Baik untuk Produktivitas</h3>
-                                    <p class="text-slate-500 text-sm line-clamp-2 mb-4">Kurang tidur dapat mempengaruhi
-                                        kinerja otak dan fokus anda...</p>
-                                    <a href="detail-artikel.html?slug=pola-tidur-yang-baik-untuk-produktivitas"
-                                        class="text-sm font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-2">Baca
-                                        Selengkapnya <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
-                                </div>
-                            </article>
-
-                            <!-- Article 4 -->
-                            <article
-                                class="bg-white dark:bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group reveal delay-300">
-                                <div class="relative h-48 overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-                                        alt="Hospital"
-                                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
-                                    <div
-                                        class="absolute top-4 left-4 bg-white/90 dark:bg-black/70 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary">
-                                        Info Medis</div>
-                                </div>
-                                <div class="p-6">
-                                    <h3
-                                        class="font-bold text-lg mb-2 text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary transition">
-                                        Kapan Harus Melakukan Medical Check-Up?</h3>
-                                    <p class="text-slate-500 text-sm line-clamp-2 mb-4">Pentingnya deteksi dini penyakit
-                                        melalui pemeriksaan rutin...</p>
-                                    <a href="detail-artikel.html?slug=kapan-harus-melakukan-medical-check-up"
-                                        class="text-sm font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-2">Baca
-                                        Selengkapnya <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
-                                </div>
-                            </article>
-                        </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Doctor Card 1 -->
+                <div
+                    class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl p-4 hover:shadow-lg transition text-center reveal">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Doctor" class="w-full h-full rounded-full object-cover">
                     </div>
-                </section>
-
-                <!-- Testimonials -->
-                <section class="py-20 bg-primary bg-opacity-5 dark:bg-opacity-5 reveal">
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h2 class="text-3xl font-bold text-center mb-12 text-slate-900 dark:text-white">Apa Kata Mereka?
-                        </h2>
-                        <div class="grid md:grid-cols-3 gap-8">
-                            <!-- Testi 1 -->
-                            <div
-                                class="bg-white dark:bg-card p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 relative">
-                                <i data-lucide="quote" class="w-10 h-10 text-primary/20 absolute top-4 right-4"></i>
-                                <div class="flex items-center gap-4 mb-4">
-                                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
-                                        class="w-12 h-12 rounded-full">
-                                    <div>
-                                        <h4 class="font-bold text-slate-900 dark:text-white">Rina Susanti</h4>
-                                        <p class="text-xs text-slate-500">Ibu Rumah Tangga</p>
-                                    </div>
-                                </div>
-                                <p class="text-slate-600 dark:text-slate-300 italic">"Sangat terbantu dengan layanan
-                                    chat dokter. Responnya cepat dan penjelasannya sangat detail. Obat langsung diantar
-                                    ke rumah."</p>
-                            </div>
-
-                            <!-- Testi 2 -->
-                            <div
-                                class="bg-white dark:bg-card p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 relative">
-                                <i data-lucide="quote" class="w-10 h-10 text-primary/20 absolute top-4 right-4"></i>
-                                <div class="flex items-center gap-4 mb-4">
-                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User"
-                                        class="w-12 h-12 rounded-full">
-                                    <div>
-                                        <h4 class="font-bold text-slate-900 dark:text-white">Dimas Pratama</h4>
-                                        <p class="text-xs text-slate-500">Karyawan Swasta</p>
-                                    </div>
-                                </div>
-                                <p class="text-slate-600 dark:text-slate-300 italic">"Aplikasi health & lifestyle
-                                    terbaik. Fitur booking janji RS-nya sangat efisien, tidak perlu antri lama di rumah
-                                    sakit lagi."</p>
-                            </div>
-
-                            <!-- Testi 3 -->
-                            <div
-                                class="bg-white dark:bg-card p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 relative">
-                                <i data-lucide="quote" class="w-10 h-10 text-primary/20 absolute top-4 right-4"></i>
-                                <div class="flex items-center gap-4 mb-4">
-                                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User"
-                                        class="w-12 h-12 rounded-full">
-                                    <div>
-                                        <h4 class="font-bold text-slate-900 dark:text-white">Siti Nurhaliza</h4>
-                                        <p class="text-xs text-slate-500">Mahasiswi</p>
-                                    </div>
-                                </div>
-                                <p class="text-slate-600 dark:text-slate-300 italic">"Artikel kesehatannya sangat
-                                    informatif dan terpercaya. Tampilannya juga bersih dan mudah digunakan."</p>
-                            </div>
-                        </div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white">dr. Sarah Wijaya</h3>
+                    <p class="text-primary text-sm font-medium mb-2">Spesialis Anak</p>
+                    <div class="flex items-center justify-center gap-1 text-yellow-400 text-sm mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <span class="text-slate-600 dark:text-slate-400 font-medium">4.9 (1.2k)</span>
                     </div>
-                </section>
+                    <div class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl">
+                        <span class="text-xs font-medium text-slate-500">Mulai dari</span>
+                        <span class="text-sm font-bold text-slate-800 dark:text-white">Rp 50.000</span>
+                    </div>
+                    <a href="detail-dokter.html?nama=dr.%20Sarah%20Wijaya"
+                        class="block w-full mt-4 bg-primary/10 hover:bg-primary text-primary hover:text-white py-2 rounded-lg font-medium transition text-sm text-center">Chat
+                        Sekarang</a>
+                </div>
 
-                <!-- Footer -->
-                <footer
-                    class="bg-slate-50 dark:bg-[#0b1120] pt-16 pb-8 border-t border-slate-200 dark:border-slate-800">
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-                            <!-- Brand -->
-                            <div>
-                                <div class="flex items-center gap-2 mb-6">
-                                    <div
-                                        class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
-                                        <i data-lucide="heart-pulse" class="w-5 h-5"></i>
-                                    </div>
-                                    <span class="text-xl font-bold text-slate-900 dark:text-white">HealthLife</span>
-                                </div>
-                                <p class="text-slate-500 dark:text-slate-400 mb-6">Partner kesehatan terpercaya keluarga
-                                    Anda. Melayani dengan hati, didukung teknologi terkini.</p>
-                                <div class="flex space-x-4">
-                                    <a href="#"
-                                        class="w-10 h-10 rounded-full bg-white dark:bg-card flex items-center justify-center text-slate-500 hover:text-primary hover:shadow-md transition border border-slate-100 dark:border-slate-700"><i
-                                            data-lucide="instagram" class="w-5 h-5"></i></a>
-                                    <a href="#"
-                                        class="w-10 h-10 rounded-full bg-white dark:bg-card flex items-center justify-center text-slate-500 hover:text-primary hover:shadow-md transition border border-slate-100 dark:border-slate-700"><i
-                                            data-lucide="facebook" class="w-5 h-5"></i></a>
-                                    <a href="#"
-                                        class="w-10 h-10 rounded-full bg-white dark:bg-card flex items-center justify-center text-slate-500 hover:text-primary hover:shadow-md transition border border-slate-100 dark:border-slate-700"><i
-                                            data-lucide="twitter" class="w-5 h-5"></i></a>
-                                </div>
-                            </div>
+                <!-- Doctor Card 2 -->
+                <div
+                    class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl p-4 hover:shadow-lg transition text-center reveal delay-100">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+                        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Doctor" class="w-full h-full rounded-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white">dr. Budi Santoso</h3>
+                    <p class="text-primary text-sm font-medium mb-2">Spesialis Jantung</p>
+                    <div class="flex items-center justify-center gap-1 text-yellow-400 text-sm mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <span class="text-slate-600 dark:text-slate-400 font-medium">5.0 (850)</span>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl">
+                        <span class="text-xs font-medium text-slate-500">Mulai dari</span>
+                        <span class="text-sm font-bold text-slate-800 dark:text-white">Rp 85.000</span>
+                    </div>
+                    <a href="detail-dokter.html?nama=dr.%20Budi%20Santoso"
+                        class="block w-full mt-4 bg-primary/10 hover:bg-primary text-primary hover:text-white py-2 rounded-lg font-medium transition text-sm text-center">Chat
+                        Sekarang</a>
+                </div>
 
-                            <!-- Links -->
-                            <div>
-                                <h4 class="font-bold text-slate-900 dark:text-white mb-6">Layanan</h4>
-                                <ul class="space-y-3">
-                                    <li><a href="#"
-                                            class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Chat
-                                            Dokter</a></li>
-                                    <li><a href="#"
-                                            class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Toko
-                                            Obat</a></li>
-                                    <li><a href="#"
-                                            class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Buat
-                                            Janji RS</a></li>
-                                    <li><a href="#"
-                                            class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Cek
-                                            Lab</a></li>
-                                </ul>
-                            </div>
+                <!-- Doctor Card 3 -->
+                <div
+                    class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl p-4 hover:shadow-lg transition text-center reveal delay-200">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Doctor" class="w-full h-full rounded-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white">dr. Amanda Lee</h3>
+                    <p class="text-primary text-sm font-medium mb-2">Spesialis Kulit</p>
+                    <div class="flex items-center justify-center gap-1 text-yellow-400 text-sm mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <span class="text-slate-600 dark:text-slate-400 font-medium">4.8 (2.1k)</span>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl">
+                        <span class="text-xs font-medium text-slate-500">Mulai dari</span>
+                        <span class="text-sm font-bold text-slate-800 dark:text-white">Rp 60.000</span>
+                    </div>
+                    <a href="detail-dokter.html?nama=dr.%20Amanda%20Lee"
+                        class="block w-full mt-4 bg-primary/10 hover:bg-primary text-primary hover:text-white py-2 rounded-lg font-medium transition text-sm text-center">Chat
+                        Sekarang</a>
+                </div>
 
-                            <!-- Company -->
-                            <div>
-                                <h4 class="font-bold text-slate-900 dark:text-white mb-6">Perusahaan</h4>
-                                <ul class="space-y-3">
-                                    <li><a href="#"
-                                            class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Tentang
-                                            Kami</a></li>
-                                    <li><a href="#"
-                                            class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Karir</a>
-                                    </li>
-                                    <li><a href="#"
-                                            class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Kebijakan
-                                            Privasi</a></li>
-                                    <li><a href="#"
-                                            class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Syarat
-                                            & Ketentuan</a></li>
-                                </ul>
-                            </div>
+                <!-- Doctor Card 4 -->
+                <div
+                    class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl p-4 hover:shadow-lg transition text-center reveal delay-300">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary/20 p-1">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                            alt="Doctor" class="w-full h-full rounded-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 dark:text-white">dr. Kevin Lim</h3>
+                    <p class="text-primary text-sm font-medium mb-2">Psikolog Klinis</p>
+                    <div class="flex items-center justify-center gap-1 text-yellow-400 text-sm mb-4">
+                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        <span class="text-slate-600 dark:text-slate-400 font-medium">4.9 (980)</span>
+                    </div>
+                    <div class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl">
+                        <span class="text-xs font-medium text-slate-500">Mulai dari</span>
+                        <span class="text-sm font-bold text-slate-800 dark:text-white">Rp 75.000</span>
+                    </div>
+                    <a href="detail-dokter.html?nama=dr.%20Kevin%20Lim"
+                        class="block w-full mt-4 bg-primary/10 hover:bg-primary text-primary hover:text-white py-2 rounded-lg font-medium transition text-sm text-center">Chat
+                        Sekarang</a>
+                </div>
+            </div>
 
-                            <!-- Contact -->
-                            <div>
-                                <h4 class="font-bold text-slate-900 dark:text-white mb-6">Hubungi Kami</h4>
-                                <ul class="space-y-3">
-                                    <li class="flex items-start gap-3 text-slate-500 dark:text-slate-400">
-                                        <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0"></i>
-                                        <span>Jl. Sudirman No. 88, Jakarta Selatan, Indonesia</span>
-                                    </li>
-                                    <li class="flex items-center gap-3 text-slate-500 dark:text-slate-400">
-                                        <i data-lucide="phone" class="w-5 h-5 text-primary flex-shrink-0"></i>
-                                        <span>+62 21 555 0123</span>
-                                    </li>
-                                    <li class="flex items-center gap-3 text-slate-500 dark:text-slate-400">
-                                        <i data-lucide="mail" class="w-5 h-5 text-primary flex-shrink-0"></i>
-                                        <span>support@healthlife.com</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+            <div class="mt-8 text-center md:hidden">
+                <a href="#" class="text-primary font-medium hover:underline inline-flex items-center gap-1">
+                    Lihat Semua Dokter <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
+    <!-- Articles Section -->
+    <section id="artikel" class="py-20 bg-slate-50 dark:bg-[#162032]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="text-primary font-semibold tracking-wider uppercase text-sm">Edukasi</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 text-slate-900 dark:text-white">Artikel
+                    Kesehatan Terbaru</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Article 1 -->
+                <article
+                    class="bg-white dark:bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group reveal">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Food"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
                         <div
-                            class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                            <p class="text-slate-500 dark:text-slate-400 text-sm">© 2023 HealthLife. All rights
-                                reserved.</p>
-                            <div class="flex gap-4">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1200px-Google_Play_Store_badge_EN.svg.png"
-                                    class="h-10 cursor-pointer" alt="Play Store">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png"
-                                    class="h-10 cursor-pointer" alt="App Store">
-                            </div>
+                            class="absolute top-4 left-4 bg-white/90 dark:bg-black/70 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary">
+                            Nutrisi</div>
+                    </div>
+                    <div class="p-6">
+                        <h3
+                            class="font-bold text-lg mb-2 text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary transition">
+                            10 Makanan Super untuk Meningkatkan Imunitas</h3>
+                        <p class="text-slate-500 text-sm line-clamp-2 mb-4">Menjaga daya tahan tubuh sangat
+                            penting, berikut adalah daftar makanan...</p>
+                        <a href="detail-artikel.html?slug=10-makanan-super-untuk-meningkatkan-imunitas"
+                            class="text-sm font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-2">Baca
+                            Selengkapnya <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article
+                    class="bg-white dark:bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group reveal delay-100">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Yoga"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 dark:bg-black/70 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary">
+                            Hidup Sehat</div>
+                    </div>
+                    <div class="p-6">
+                        <h3
+                            class="font-bold text-lg mb-2 text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary transition">
+                            Manfaat Olahraga Pagi Bagi Kesehatan Mental</h3>
+                        <p class="text-slate-500 text-sm line-clamp-2 mb-4">Memulai hari dengan olahraga
+                            ringan dapat mengurangi stress...</p>
+                        <a href="detail-artikel.html?slug=manfaat-olahraga-pagi-bagi-kesehatan-mental"
+                            class="text-sm font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-2">Baca
+                            Selengkapnya <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article
+                    class="bg-white dark:bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group reveal delay-200">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584362917165-526a968579e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Sleep"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 dark:bg-black/70 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary">
+                            Tips</div>
+                    </div>
+                    <div class="p-6">
+                        <h3
+                            class="font-bold text-lg mb-2 text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary transition">
+                            Pola Tidur yang Baik untuk Produktivitas</h3>
+                        <p class="text-slate-500 text-sm line-clamp-2 mb-4">Kurang tidur dapat mempengaruhi
+                            kinerja otak dan fokus anda...</p>
+                        <a href="detail-artikel.html?slug=pola-tidur-yang-baik-untuk-produktivitas"
+                            class="text-sm font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-2">Baca
+                            Selengkapnya <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article
+                    class="bg-white dark:bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group reveal delay-300">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+                            alt="Hospital"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute top-4 left-4 bg-white/90 dark:bg-black/70 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary">
+                            Info Medis</div>
+                    </div>
+                    <div class="p-6">
+                        <h3
+                            class="font-bold text-lg mb-2 text-slate-900 dark:text-white line-clamp-2 group-hover:text-primary transition">
+                            Kapan Harus Melakukan Medical Check-Up?</h3>
+                        <p class="text-slate-500 text-sm line-clamp-2 mb-4">Pentingnya deteksi dini penyakit
+                            melalui pemeriksaan rutin...</p>
+                        <a href="detail-artikel.html?slug=kapan-harus-melakukan-medical-check-up"
+                            class="text-sm font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-2">Baca
+                            Selengkapnya <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-primary bg-opacity-5 dark:bg-opacity-5 reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-slate-900 dark:text-white">Apa Kata Mereka?
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testi 1 -->
+                <div
+                    class="bg-white dark:bg-card p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 relative">
+                    <i data-lucide="quote" class="w-10 h-10 text-primary/20 absolute top-4 right-4"></i>
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                            class="w-12 h-12 rounded-full">
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">Rina Susanti</h4>
+                            <p class="text-xs text-slate-500">Ibu Rumah Tangga</p>
                         </div>
                     </div>
-                </footer>
+                    <p class="text-slate-600 dark:text-slate-300 italic">"Sangat terbantu dengan layanan
+                        chat dokter. Responnya cepat dan penjelasannya sangat detail. Obat langsung diantar
+                        ke rumah."</p>
+                </div>
 
-<script src="assets/js/main.js"></script>
+                <!-- Testi 2 -->
+                <div
+                    class="bg-white dark:bg-card p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 relative">
+                    <i data-lucide="quote" class="w-10 h-10 text-primary/20 absolute top-4 right-4"></i>
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User"
+                            class="w-12 h-12 rounded-full">
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">Dimas Pratama</h4>
+                            <p class="text-xs text-slate-500">Karyawan Swasta</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 italic">"Aplikasi health & lifestyle
+                        terbaik. Fitur booking janji RS-nya sangat efisien, tidak perlu antri lama di rumah
+                        sakit lagi."</p>
+                </div>
+
+                <!-- Testi 3 -->
+                <div
+                    class="bg-white dark:bg-card p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 relative">
+                    <i data-lucide="quote" class="w-10 h-10 text-primary/20 absolute top-4 right-4"></i>
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User"
+                            class="w-12 h-12 rounded-full">
+                        <div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">Siti Nurhaliza</h4>
+                            <p class="text-xs text-slate-500">Mahasiswi</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-300 italic">"Artikel kesehatannya sangat
+                        informatif dan terpercaya. Tampilannya juga bersih dan mudah digunakan."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 dark:bg-[#0b1120] pt-16 pb-8 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
+                            <i data-lucide="heart-pulse" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-xl font-bold text-slate-900 dark:text-white">HealthLife</span>
+                    </div>
+                    <p class="text-slate-500 dark:text-slate-400 mb-6">Partner kesehatan terpercaya keluarga
+                        Anda. Melayani dengan hati, didukung teknologi terkini.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-card flex items-center justify-center text-slate-500 hover:text-primary hover:shadow-md transition border border-slate-100 dark:border-slate-700"><i
+                                data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-card flex items-center justify-center text-slate-500 hover:text-primary hover:shadow-md transition border border-slate-100 dark:border-slate-700"><i
+                                data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-card flex items-center justify-center text-slate-500 hover:text-primary hover:shadow-md transition border border-slate-100 dark:border-slate-700"><i
+                                data-lucide="twitter" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-6">Layanan</h4>
+                    <ul class="space-y-3">
+                        <li><a href="dokter.html" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Chat
+                                Dokter</a></li>
+                        <li><a href="detail-layanan.html?id=toko-obat" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Toko
+                                Obat</a></li>
+                        <li><a href="janji-rs.html" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Buat
+                                Janji RS</a></li>
+                        <li><a href="detail-layanan.html?id=cek-lab" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Cek
+                                Lab</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-6">Perusahaan</h4>
+                    <ul class="space-y-3">
+                        <li><a href="profile.html" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Profil
+                                Kami</a></li>
+                        <li><a href="layanan.html"
+                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Layanan</a>
+                        </li>
+                        <li><a href="artikel.html"
+                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Artikel</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-bold text-slate-900 dark:text-white mb-6">Hubungi Kami</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3 text-slate-500 dark:text-slate-400">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0"></i>
+                            <span>Jl. Bj Habibie No. 88, Kota Gorontalo, Indonesia</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-500 dark:text-slate-400">
+                            <i data-lucide="phone" class="w-5 h-5 text-primary flex-shrink-0"></i>
+                            <span>+62 21 555 0123</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-500 dark:text-slate-400">
+                            <i data-lucide="mail" class="w-5 h-5 text-primary flex-shrink-0"></i>
+                            <span>support@healthlife.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 dark:text-slate-400 text-sm">© 2025 HealthLife. All rights
+                    reserved.</p>
+                <div class="flex gap-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1200px-Google_Play_Store_badge_EN.svg.png"
+                        class="h-10 cursor-pointer" alt="Play Store">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png"
+                        class="h-10 cursor-pointer" alt="App Store">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- Login Modal -->
+    <div id="login-modal" class="fixed inset-0 z-[70] hidden">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" id="login-modal-overlay">
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div
+                class="bg-white dark:bg-card w-full max-w-md rounded-3xl shadow-2xl overflow-hidden transform transition-all scale-100 opacity-100 relative">
+                <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 transition close-modal-btn">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+                <div class="p-8">
+                    <div class="text-center mb-8">
+                        <div
+                            class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mx-auto mb-4">
+                            <i data-lucide="log-in" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Selamat Datang Kembali</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-2">Silakan masuk ke akun Anda</p>
+                    </div>
+                    <form class="space-y-4">
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Email</label>
+                            <div class="relative">
+                                <i data-lucide="mail" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                <input type="email"
+                                    class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
+                                    placeholder="nama@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Password</label>
+                            <div class="relative">
+                                <i data-lucide="lock" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                <input type="password"
+                                    class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
+                                    placeholder="••••••••">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <label class="flex items-center gap-2 text-slate-600 dark:text-slate-400 cursor-pointer">
+                                <input type="checkbox" class="rounded border-slate-300 text-primary focus:ring-primary">
+                                Ingat saya
+                            </label>
+                            <a href="#" class="text-primary font-medium hover:underline">Lupa password?</a>
+                        </div>
+                        <button type="button"
+                            class="w-full bg-primary hover:bg-primary-dark text-white py-3 rounded-xl font-bold shadow-lg shadow-primary/30 transition transform active:scale-95">Masuk</button>
+                    </form>
+                    <p class="text-center text-sm text-slate-500 dark:text-slate-400 mt-6">
+                        Belum punya akun? <button
+                            class="text-primary font-bold hover:underline switch-to-register">Daftar sekarang</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="fixed inset-0 z-[70] hidden">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" id="register-modal-overlay">
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div
+                class="bg-white dark:bg-card w-full max-w-md rounded-3xl shadow-2xl overflow-hidden transform transition-all scale-100 opacity-100 relative">
+                <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 transition close-modal-btn">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+                <div class="p-8">
+                    <div class="text-center mb-8">
+                        <div
+                            class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mx-auto mb-4">
+                            <i data-lucide="user-plus" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Buat Akun Baru</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-2">Gabung bersama kami untuk hidup lebih
+                            sehat</p>
+                    </div>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Nama
+                                Lengkap</label>
+                            <div class="relative">
+                                <i data-lucide="user" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                <input type="text"
+                                    class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
+                                    placeholder="Nama Anda">
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Email</label>
+                            <div class="relative">
+                                <i data-lucide="mail" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                <input type="email"
+                                    class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
+                                    placeholder="nama@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Password</label>
+                            <div class="relative">
+                                <i data-lucide="lock" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                <input type="password"
+                                    class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
+                                    placeholder="••••••••">
+                            </div>
+                        </div>
+                        <button type="button"
+                            class="w-full bg-primary hover:bg-primary-dark text-white py-3 rounded-xl font-bold shadow-lg shadow-primary/30 transition transform active:scale-95">Daftar
+                            Sekarang</button>
+                    </form>
+                    <p class="text-center text-sm text-slate-500 dark:text-slate-400 mt-6">
+                        Sudah punya akun? <button
+                            class="text-primary font-bold hover:underline switch-to-login">Masuk</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>

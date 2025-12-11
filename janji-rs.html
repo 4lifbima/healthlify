@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/icon.png" type="image/png">
-    <title>Artikel Kesehatan - HealthLife</title>
+    <title>Buat Janji RS - HealthLife</title>
 
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
 <body class="bg-white dark:bg-dark text-slate-800 dark:text-slate-100 transition-colors duration-300">
 
     <!-- Navbar -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300 shadow-sm" id="navbar">
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Logo -->
@@ -53,14 +53,14 @@
                     <a href="dokter.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Cari
                         Dokter</a>
-                    <a href="artikel.html" class="text-primary font-medium transition">Artikel</a>
-                    <a href="janji-rs.html"
-                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Buat
-                        Janji</a>
+                    <a href="artikel.html"
+                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Artikel</a>
+                    <a href="janji-rs.html" class="text-primary font-medium transition">Buat Janji</a>
                 </div>
 
                 <!-- Right Actions -->
                 <div class="hidden md:flex items-center space-x-4">
+                    <!-- Dark Mode Toggle -->
                     <button id="theme-toggle"
                         class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-300">
                         <i data-lucide="moon" class="w-5 h-5 hidden dark:block"></i>
@@ -133,17 +133,20 @@
                 Cari Dokter
             </a>
             <a href="artikel.html"
-                class="mobile-link flex items-center gap-3 px-4 py-3 text-primary bg-primary/5 rounded-xl transition-all font-medium group">
-                <i data-lucide="book-open" class="w-5 h-5 text-primary group-hover:text-primary transition-colors"></i>
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                <i data-lucide="book-open"
+                    class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
                 Artikel
             </a>
             <a href="janji-rs.html"
-                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-primary bg-primary/5 rounded-xl transition-all font-medium group">
                 <i data-lucide="calendar-heart"
-                    class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+                    class="w-5 h-5 text-primary group-hover:text-primary transition-colors"></i>
                 Buat Janji
             </a>
+
             <div class="my-6 border-t border-slate-100 dark:border-slate-800"></div>
+
             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider px-4 mb-2">Akun</div>
             <button
                 class="w-full flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-all font-medium login-btn">
@@ -165,58 +168,187 @@
         class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[55] hidden transition-opacity duration-300 md:hidden">
     </div>
 
-    <!-- Main Content -->
+    <!-- Appointment Section -->
     <section class="pt-32 pb-20 bg-slate-50 dark:bg-[#162032] min-h-screen">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-primary font-semibold tracking-wider uppercase text-sm">Blog & Berita</span>
-                <h1 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-slate-900 dark:text-white">Artikel Kesehatan
-                    Terbaru</h1>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <span class="text-primary font-semibold tracking-wider uppercase text-sm">Reservasi Online</span>
+                <h1 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-slate-900 dark:text-white">Buat Janji Rumah
+                    Sakit</h1>
                 <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                    Dapatkan informasi terkini seputar kesehatan, tips gaya hidup sehat, dan berita medis terpercaya.
+                    Isi formulir di bawah ini untuk menjadwalkan kunjungan Anda ke rumah sakit mitra kami.
                 </p>
+            </div>
 
-                <!-- Filter Categories -->
-                <div class="flex flex-wrap justify-center gap-3 mt-8" id="category-filters">
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-primary text-white font-medium text-sm transition filter-btn active"
-                        data-category="all">Semua</button>
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-card text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary font-medium text-sm transition filter-btn"
-                        data-category="Nutrisi">Nutrisi</button>
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-card text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary font-medium text-sm transition filter-btn"
-                        data-category="Kesehatan Mental">Kesehatan Mental</button>
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-card text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary font-medium text-sm transition filter-btn"
-                        data-category="Hidup Sehat">Hidup Sehat</button>
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-card text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary font-medium text-sm transition filter-btn"
-                        data-category="Tips">Tips</button>
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-card text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary font-medium text-sm transition filter-btn"
-                        data-category="Info Medis">Info Medis</button>
+            <!-- Form Card -->
+            <div
+                class="bg-white dark:bg-card rounded-3xl shadow-xl border border-slate-100 dark:border-slate-800 overflow-hidden">
+                <div class="p-8 md:p-10">
+                    <form action="#" method="GET">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <!-- Nama Lengkap -->
+                            <div class="col-span-full">
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Nama
+                                    Lengkap Pasien</label>
+                                <div class="relative">
+                                    <i data-lucide="user" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                    <input type="text"
+                                        class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
+                                        placeholder="Masukkan nama lengkap sesuai KTP" required>
+                                </div>
+                            </div>
+
+                            <!-- Nomor Telepon -->
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Nomor
+                                    Telepon / WhatsApp</label>
+                                <div class="relative">
+                                    <i data-lucide="phone" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                    <input type="tel"
+                                        class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
+                                        placeholder="0812xxxx" required>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Alamat
+                                    Email</label>
+                                <div class="relative">
+                                    <i data-lucide="mail" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                    <input type="email"
+                                        class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
+                                        placeholder="email@contoh.com" required>
+                                </div>
+                            </div>
+
+                            <!-- Tanggal Lahir -->
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Tanggal
+                                    Lahir</label>
+                                <div class="relative">
+                                    <i data-lucide="calendar"
+                                        class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                    <input type="date"
+                                        class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition text-slate-500"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- Jenis Kelamin -->
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Jenis
+                                    Kelamin</label>
+                                <div class="relative">
+                                    <i data-lucide="users" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                    <select
+                                        class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition appearance-none"
+                                        required>
+                                        <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                                        <option value="pria">Pria</option>
+                                        <option value="wanita">Wanita</option>
+                                    </select>
+                                    <i data-lucide="chevron-down"
+                                        class="absolute right-4 top-3.5 w-5 h-5 text-slate-400 pointer-events-none"></i>
+                                </div>
+                            </div>
+
+                            <!-- Pilih Rumah Sakit -->
+                            <div class="col-span-full">
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Pilih
+                                    Rumah Sakit Tujuan</label>
+                                <div class="relative">
+                                    <i data-lucide="building-2"
+                                        class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                    <select
+                                        class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition appearance-none"
+                                        required>
+                                        <option value="" disabled selected>Pilih Lokasi Rumah Sakit</option>
+                                        <option value="rs_jakarta">RS HealthLife Jakarta Pusat</option>
+                                        <option value="rs_selatan">RS HealthLife Jakarta Selatan</option>
+                                        <option value="rs_barat">RS HealthLife Jakarta Barat</option>
+                                        <option value="rs_surabaya">RS HealthLife Surabaya</option>
+                                        <option value="rs_bandung">RS HealthLife Bandung</option>
+                                    </select>
+                                    <i data-lucide="chevron-down"
+                                        class="absolute right-4 top-3.5 w-5 h-5 text-slate-400 pointer-events-none"></i>
+                                </div>
+                            </div>
+
+                            <!-- Pilih Dokter/Poli -->
+                            <div class="col-span-full">
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Pilih
+                                    Poliklinik / Spesialis</label>
+                                <div class="relative">
+                                    <i data-lucide="stethoscope"
+                                        class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                    <select
+                                        class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition appearance-none"
+                                        required>
+                                        <option value="" disabled selected>Pilih Poliklinik</option>
+                                        <option value="poli_umum">Poli Umum</option>
+                                        <option value="poli_gigi">Poli Gigi</option>
+                                        <option value="poli_anak">Spesialis Anak</option>
+                                        <option value="poli_kandungan">Spesialis Kandungan (Obgyn)</option>
+                                        <option value="poli_jantung">Spesialis Jantung</option>
+                                        <option value="poli_kulit">Spesialis Kulit & Kelamin</option>
+                                        <option value="poli_mata">Spesialis Mata</option>
+                                        <option value="poli_tht">Spesialis THT</option>
+                                    </select>
+                                    <i data-lucide="chevron-down"
+                                        class="absolute right-4 top-3.5 w-5 h-5 text-slate-400 pointer-events-none"></i>
+                                </div>
+                            </div>
+
+                            <!-- Tanggal Kunjungan -->
+                            <div class="col-span-full">
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Rencana
+                                    Tanggal Kunjungan</label>
+                                <div class="relative">
+                                    <i data-lucide="calendar-days"
+                                        class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                    <input type="date"
+                                        class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition text-slate-500"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- Keluhan -->
+                            <div class="col-span-full">
+                                <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Keluhan
+                                    / Catatan Tambahan (Opsional)</label>
+                                <div class="relative">
+                                    <textarea rows="4"
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
+                                        placeholder="Jelaskan keluhan singkat Anda..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 pt-4 border-t border-slate-100 dark:border-slate-800">
+                            <button type="submit"
+                                class="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold shadow-xl shadow-primary/30 transition transform active:scale-95 flex items-center gap-2">
+                                <i data-lucide="check-circle" class="w-5 h-5"></i>
+                                Konfirmasi Janji
+                            </button>
+                            <button type="button"
+                                class="text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 font-medium px-4 py-4">
+                                Batal
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
 
-            <!-- Changed grid-cols-3 to grid-cols-4 as requested -->
-            <div id="wrapper-artikel" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Loading State -->
-                <div class="col-span-full text-center py-20 hidden" id="loading">
-                    <div
-                        class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-primary border-t-transparent">
-                    </div>
-                    <p class="mt-2 text-slate-500">Memuat artikel...</p>
+            <!-- Info Box -->
+            <div class="mt-8 bg-blue-50 dark:bg-blue-900/20 p-6 rounded-2xl flex items-start gap-4">
+                <i data-lucide="info" class="w-6 h-6 text-blue-500 flex-shrink-0 mt-1"></i>
+                <div class="text-sm text-slate-600 dark:text-slate-300">
+                    <p class="font-bold text-slate-900 dark:text-white mb-1">Informasi Penting</p>
+                    <p>Harap datang 30 menit sebelum jadwal konsultasi untuk proses administrasi ulang. Membawa
+                        KTP/Identitas diri dan Kartu Asuransi (jika ada).</p>
                 </div>
-            </div>
-
-            <div id="no-results" class="hidden text-center py-20">
-                <div
-                    class="inline-flex items-center justify-center p-4 bg-slate-100 dark:bg-slate-800 rounded-full mb-4">
-                    <i data-lucide="file-question" class="w-8 h-8 text-slate-400"></i>
-                </div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Tidak Ditemukan</h3>
-                <p class="text-slate-500 dark:text-slate-400 mt-2">Belum ada artikel untuk kategori ini.</p>
             </div>
         </div>
     </section>
@@ -436,114 +568,6 @@
     </div>
 
     <script src="assets/js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const container = document.getElementById('wrapper-artikel');
-            const loading = document.getElementById('loading');
-            const noResults = document.getElementById('no-results');
-            const filterBtns = document.querySelectorAll('.filter-btn');
-
-            let allArticles = [];
-
-            // Show loading initially
-            if (loading) loading.classList.remove('hidden');
-
-            fetch('data/artikel.json')
-                .then(response => response.json())
-                .then(data => {
-                    allArticles = data;
-                    renderArticles(data);
-                    // Hide loading
-                    if (loading) loading.classList.add('hidden');
-                })
-                .catch(err => {
-                    console.error(err);
-                    if (loading) loading.classList.add('hidden');
-                    container.innerHTML = `
-                        <div class="col-span-full text-center p-8 bg-red-50 dark:bg-red-900/20 rounded-xl">
-                            <i data-lucide="alert-circle" class="w-12 h-12 text-red-500 mx-auto mb-4"></i>
-                            <h3 class="text-lg font-bold text-red-500 mb-2">Gagal Memuat Data</h3>
-                            <p class="text-slate-600 dark:text-slate-400">Pastikan file <code>data/artikel.json</code> tersedia.</p>
-                        </div>
-                    `;
-                    lucide.createIcons();
-                });
-
-            function renderArticles(articles) {
-                container.innerHTML = '';
-
-                if (articles.length === 0) {
-                    noResults.classList.remove('hidden');
-                    return;
-                } else {
-                    noResults.classList.add('hidden');
-                }
-
-                articles.forEach((artikel, index) => {
-                    const delay = index * 100;
-                    // Provide defaults
-                    const readTime = artikel.read_time || '5';
-
-                    const html = `
-                        <article class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col h-full reveal active" style="animation-delay: ${delay}ms">
-                            <div class="relative h-48 overflow-hidden">
-                                <img src="${artikel.gambar}" alt="${artikel.judul}" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                                <div class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary uppercase tracking-wide">
-                                    ${artikel.kategori}
-                                </div>
-                            </div>
-                            <div class="p-6 flex flex-col flex-1">
-                                <div class="flex items-center text-xs text-slate-500 dark:text-slate-400 mb-3 gap-2">
-                                    <i data-lucide="calendar" class="w-3 h-3"></i>
-                                    <span>${artikel.tanggal}</span>
-                                    <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
-                                    <i data-lucide="clock" class="w-3 h-3"></i>
-                                    <span>${readTime} min read</span>
-                                </div>
-                                <h3 class="font-bold text-xl mb-3 text-slate-900 dark:text-white leading-tight group-hover:text-primary transition line-clamp-2">
-                                    ${artikel.judul}
-                                </h3>
-                                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3 flex-1">
-                                    ${artikel.deskripsi}
-                                </p>
-                                <a href="detail-artikel.html?slug=${artikel.slug}" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all mt-auto self-start">
-                                    Baca Selengkapnya <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-                        </article>
-                    `;
-                    container.insertAdjacentHTML('beforeend', html);
-                });
-                lucide.createIcons();
-            }
-
-            // Filter Logic
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Update Active State
-                    filterBtns.forEach(b => {
-                        b.classList.remove('bg-primary', 'text-white', 'border-transparent');
-                        b.classList.add('bg-white', 'dark:bg-card', 'text-slate-600', 'dark:text-slate-400', 'border-slate-200', 'dark:border-slate-700');
-                    });
-                    btn.classList.remove('bg-white', 'dark:bg-card', 'text-slate-600', 'dark:text-slate-400', 'border-slate-200', 'dark:border-slate-700');
-                    btn.classList.add('bg-primary', 'text-white', 'border-transparent');
-
-                    const category = btn.getAttribute('data-category');
-
-                    if (category === 'all') {
-                        renderArticles(allArticles);
-                    } else {
-                        // Loose matching for filter buttons vs data categories
-                        const filtered = allArticles.filter(art => {
-                            return (art.kategori && art.kategori.toLowerCase().includes(category.toLowerCase())) ||
-                                (category && category.toLowerCase().includes(art.kategori.toLowerCase()));
-                        });
-                        renderArticles(filtered);
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>

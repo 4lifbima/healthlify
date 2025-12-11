@@ -76,15 +76,20 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="index.html#beranda"
+                    <a href="index.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Beranda</a>
-                    <a href="index.html#layanan"
+                    <a href="profile.html"
+                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Profile
+                        Kami</a>
+                    <a href="layanan.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Layanan</a>
-                    <a href="index.html#dokter"
+                    <a href="dokter.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Cari
                         Dokter</a>
-                    <a href="index.html#artikel"
-                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Artikel</a>
+                    <a href="artikel.html" class="text-primary font-medium transition">Artikel</a>
+                    <a href="janji-rs.html"
+                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Buat
+                        Janji</a>
                 </div>
 
                 <!-- Right Actions -->
@@ -143,28 +148,38 @@
         <div class="flex-1 overflow-y-auto py-6 px-4 space-y-2">
             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider px-4 mb-2">Menu Utama</div>
 
-            <a href="index.html#beranda"
+            <a href="index.html"
                 class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
                 <i data-lucide="home" class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
                 Beranda
             </a>
-            <a href="index.html#layanan"
+            <a href="profile.html"
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                <i data-lucide="users" class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+                Profile Kami
+            </a>
+            <a href="layanan.html"
                 class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
                 <i data-lucide="stethoscope"
                     class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
                 Layanan
             </a>
-            <a href="index.html#dokter"
+            <a href="dokter.html"
                 class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
                 <i data-lucide="user-plus"
                     class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
                 Cari Dokter
             </a>
-            <a href="index.html#artikel"
-                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
-                <i data-lucide="book-open"
-                    class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+            <a href="artikel.html"
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-primary bg-primary/5 rounded-xl transition-all font-medium group">
+                <i data-lucide="book-open" class="w-5 h-5 text-primary group-hover:text-primary transition-colors"></i>
                 Artikel
+            </a>
+            <a href="janji-rs.html"
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                <i data-lucide="calendar-heart"
+                    class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+                Buat Janji
             </a>
 
             <div class="my-6 border-t border-slate-100 dark:border-slate-800"></div>
@@ -183,13 +198,14 @@
                 class="block w-full bg-primary hover:bg-primary-dark text-white text-center py-3.5 rounded-xl font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
                 Daftar Sekarang
             </a>
-            <p class="text-center text-xs text-slate-400 mt-4">© 2023 HealthLife App</p>
+            <p class="text-center text-xs text-slate-400 mt-4">© 2025 HealthLife App</p>
         </div>
     </div>
 
     <!-- Overlay with improved backdrop blur and z-index -->
     <div id="overlay"
-        class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[55] hidden transition-opacity duration-300 md:hidden"></div>
+        class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[55] hidden transition-opacity duration-300 md:hidden">
+    </div>
 
     <!-- Article Detail Section -->
     <section class="pt-32 pb-20 bg-slate-50 dark:bg-[#162032]">
@@ -246,17 +262,13 @@
                 <div>
                     <h4 class="font-bold text-slate-900 dark:text-white mb-6">Layanan</h4>
                     <ul class="space-y-3">
-                        <li><a href="#"
-                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Chat
+                        <li><a href="dokter.html" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Chat
                                 Dokter</a></li>
-                        <li><a href="#"
-                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Toko
+                        <li><a href="detail-layanan.html?id=toko-obat" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Toko
                                 Obat</a></li>
-                        <li><a href="#"
-                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Buat
+                        <li><a href="janji-rs.html" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Buat
                                 Janji RS</a></li>
-                        <li><a href="#"
-                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Cek
+                        <li><a href="detail-layanan.html?id=cek-lab" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Cek
                                 Lab</a></li>
                     </ul>
                 </div>
@@ -265,18 +277,13 @@
                 <div>
                     <h4 class="font-bold text-slate-900 dark:text-white mb-6">Perusahaan</h4>
                     <ul class="space-y-3">
-                        <li><a href="#"
-                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Tentang
+                        <li><a href="profile.html" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Profil
                                 Kami</a></li>
-                        <li><a href="#"
-                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Karir</a>
+                        <li><a href="layanan.html"
+                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Layanan</a>
                         </li>
-                        <li><a href="#"
-                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Kebijakan
-                                Privasi</a></li>
-                        <li><a href="#"
-                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Syarat
-                                & Ketentuan</a></li>
+                        <li><a href="artikel.html"
+                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Artikel</a></li>
                     </ul>
                 </div>
 
@@ -286,7 +293,7 @@
                     <ul class="space-y-3">
                         <li class="flex items-start gap-3 text-slate-500 dark:text-slate-400">
                             <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0"></i>
-                            <span>Jl. Sudirman No. 88, Jakarta Selatan, Indonesia</span>
+                            <span>Jl. Bj Habibie No. 88, Kota Gorontalo, Indonesia</span>
                         </li>
                         <li class="flex items-center gap-3 text-slate-500 dark:text-slate-400">
                             <i data-lucide="phone" class="w-5 h-5 text-primary flex-shrink-0"></i>
@@ -302,7 +309,7 @@
 
             <div
                 class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-slate-500 dark:text-slate-400 text-sm">© 2023 HealthLife. All rights
+                <p class="text-slate-500 dark:text-slate-400 text-sm">© 2025 HealthLife. All rights
                     reserved.</p>
                 <div class="flex gap-4">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1200px-Google_Play_Store_badge_EN.svg.png"
@@ -387,10 +394,10 @@
             try {
                 const response = await fetch('data/artikel.json');
                 const articles = await response.json();
-                
+
                 // Find article by slug
                 const article = articles.find(art => art.slug === articleSlug);
-                
+
                 if (article) {
                     renderArticleDetail(article);
                 } else {
@@ -433,7 +440,7 @@
             });
 
             // Format content with paragraphs
-            const paragraphs = article.konten.split('\n\n').map(paragraph => 
+            const paragraphs = article.konten.split('\n\n').map(paragraph =>
                 `<p class="mb-4 text-slate-600 dark:text-slate-300 leading-relaxed">${paragraph}</p>`
             ).join('');
 
@@ -464,7 +471,7 @@
                     </div>
                 </article>
             `;
-            
+
             // Reinitialize icons
             lucide.createIcons();
         }

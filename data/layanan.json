@@ -1,34 +1,78 @@
 [
     {
+        "id": "chat-dokter",
         "title": "Chat Dokter",
         "icon": "message-square-plus",
         "iconColorClass": "text-blue-500",
         "iconBgClass": "bg-blue-50 dark:bg-blue-900/20",
         "description": "Konsultasi 24 jam dengan dokter umum dan spesialis berpengalaman.",
+        "full_description": "Layanan Chat Dokter kami memungkinkan Anda untuk berkonsultasi dengan dokter umum maupun spesialis kapan saja dan di mana saja. Tidak perlu antre di rumah sakit, cukup buka aplikasi dan mulai konsultasi. Dokter kami siap membantu mendiagnosa keluhan awal, memberikan saran medis, serta resep obat jika diperlukan.",
+        "features": [
+            "Online 24/7",
+            "Dokter Umum & Spesialis",
+            "Resep Obat Digital",
+            "Privasi Terjamin",
+            "Follow-up Terjadwal"
+        ],
+        "price": "Mulai dari Rp 35.000",
+        "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
         "actionText": "Mulai Konsultasi"
     },
     {
+        "id": "toko-obat",
         "title": "Toko Obat",
         "icon": "pill",
         "iconColorClass": "text-red-500",
         "iconBgClass": "bg-red-50 dark:bg-red-900/20",
         "description": "Beli obat resep atau vitamin, diantar langsung ke rumah Anda.",
+        "full_description": "Beli kebutuhan kesehatan Anda tanpa harus keluar rumah. Toko Obat HealthLife menyediakan berbagai macam obat-obatan, vitamin, suplemen, dan alat kesehatan lainnya. Kami bekerja sama dengan apotek resmi dan terpercaya untuk menjamin keaslian produk. Pesanan Anda akan diantar dengan cepat dan aman.",
+        "features": [
+            "Obat Resep & Non-Resep",
+            "Vitamin & Suplemen Lengkap",
+            "Pengiriman Cepat (Instant/Same Day)",
+            "Produk Dijamin Asli",
+            "Diskon Member"
+        ],
+        "price": "Gratis Ongkir (S&K)",
+        "image": "https://images.unsplash.com/photo-1585435557343-3b092031a831?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
         "actionText": "Belanja Sekarang"
     },
     {
+        "id": "janji-temu-rs",
         "title": "Janji Temu RS",
-        "icon": "stethoscope",
+        "icon": "calendar-check",
         "iconColorClass": "text-primary",
         "iconBgClass": "bg-primary/10",
         "description": "Booking jadwal konsultasi tatap muka di Rumah Sakit terdekat.",
+        "full_description": "Buat janji temu dengan dokter di rumah sakit rekanan HealthLife dengan mudah. Pilih spesialisasi, lihat jadwal praktik dokter, dan booking langsung dari handphone Anda. Hindari antrean panjang di bagian administrasi rumah sakit dan dapatkan kepastian jadwal konsultasi.",
+        "features": [
+            "Bebas Antre Administrasi",
+            "Pilihan RS Terlengkap",
+            "Jadwal Dokter Real-time",
+            "Reschedule Mudah",
+            "Reminder Jadwal"
+        ],
+        "price": "Biaya Admin Rp 0",
+        "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
         "actionText": "Buat Janji"
     },
     {
+        "id": "cek-lab",
         "title": "Cek Lab",
         "icon": "flask-conical",
         "iconColorClass": "text-purple-500",
         "iconBgClass": "bg-purple-50 dark:bg-purple-900/20",
         "description": "Layanan tes laboratorium lengkap dengan hasil yang akurat.",
+        "full_description": "Lakukan pemeriksaan kesehatan menyeluruh dengan layanan Cek Lab kami. Tersedia berbagai paket pemeriksaan mulai dari cek darah rutin, kolesterol, gula darah, hingga medical check-up lengkap. Anda bisa memilih layanan Home Service untuk pengambilan sampel di rumah atau datang langsung ke laboratorium rekanan kami.",
+        "features": [
+            "Layanan Home Service",
+            "Hasil Cepat & Akurat dari Lab Terakreditasi",
+            "Beragam Paket Check-Up",
+            "Konsultasi Hasil Gratis",
+            "Riwayat Kesehatan Digital"
+        ],
+        "price": "Diskon Paket hingga 30%",
+        "image": "https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
         "actionText": "Lihat Paket"
     }
 ]

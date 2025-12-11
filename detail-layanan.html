@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/img/icon.png" type="image/png">
-    <title>Artikel Kesehatan - HealthLife</title>
+    <title>Detail Layanan - HealthLife</title>
 
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,12 +48,12 @@
                     <a href="profile.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Profile
                         Kami</a>
-                    <a href="layanan.html"
-                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Layanan</a>
+                    <a href="layanan.html" class="text-primary font-medium transition">Layanan</a>
                     <a href="dokter.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Cari
                         Dokter</a>
-                    <a href="artikel.html" class="text-primary font-medium transition">Artikel</a>
+                    <a href="artikel.html"
+                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Artikel</a>
                     <a href="janji-rs.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Buat
                         Janji</a>
@@ -121,9 +121,9 @@
                 Profile Kami
             </a>
             <a href="layanan.html"
-                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-primary bg-primary/5 rounded-xl transition-all font-medium group">
                 <i data-lucide="stethoscope"
-                    class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+                    class="w-5 h-5 text-primary group-hover:text-primary transition-colors"></i>
                 Layanan
             </a>
             <a href="dokter.html"
@@ -133,8 +133,9 @@
                 Cari Dokter
             </a>
             <a href="artikel.html"
-                class="mobile-link flex items-center gap-3 px-4 py-3 text-primary bg-primary/5 rounded-xl transition-all font-medium group">
-                <i data-lucide="book-open" class="w-5 h-5 text-primary group-hover:text-primary transition-colors"></i>
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                <i data-lucide="book-open"
+                    class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
                 Artikel
             </a>
             <a href="janji-rs.html"
@@ -166,60 +167,105 @@
     </div>
 
     <!-- Main Content -->
-    <section class="pt-32 pb-20 bg-slate-50 dark:bg-[#162032] min-h-screen">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-primary font-semibold tracking-wider uppercase text-sm">Blog & Berita</span>
-                <h1 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-slate-900 dark:text-white">Artikel Kesehatan
-                    Terbaru</h1>
-                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                    Dapatkan informasi terkini seputar kesehatan, tips gaya hidup sehat, dan berita medis terpercaya.
-                </p>
+    <main class="pt-28 pb-20 min-h-screen">
+        <!-- Breadcrumb -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+            <nav class="flex" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="index.html"
+                            class="inline-flex items-center text-sm font-medium text-slate-700 hover:text-primary dark:text-slate-400 dark:hover:text-white">
+                            <i data-lucide="home" class="w-4 h-4 mr-2"></i>
+                            Beranda
+                        </a>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 mx-1"></i>
+                            <a href="layanan.html"
+                                class="text-sm font-medium text-slate-700 hover:text-primary dark:text-slate-400 dark:hover:text-white">Layanan</a>
+                        </div>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 mx-1"></i>
+                            <span class="text-sm font-medium text-slate-500 dark:text-slate-400"
+                                id="breadcrumb-title">Detail Layanan</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+        </div>
 
-                <!-- Filter Categories -->
-                <div class="flex flex-wrap justify-center gap-3 mt-8" id="category-filters">
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-primary text-white font-medium text-sm transition filter-btn active"
-                        data-category="all">Semua</button>
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-card text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary font-medium text-sm transition filter-btn"
-                        data-category="Nutrisi">Nutrisi</button>
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-card text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary font-medium text-sm transition filter-btn"
-                        data-category="Kesehatan Mental">Kesehatan Mental</button>
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-card text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary font-medium text-sm transition filter-btn"
-                        data-category="Hidup Sehat">Hidup Sehat</button>
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-card text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary font-medium text-sm transition filter-btn"
-                        data-category="Tips">Tips</button>
-                    <button
-                        class="px-5 py-2 rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-card text-slate-600 dark:text-slate-400 hover:border-primary hover:text-primary font-medium text-sm transition filter-btn"
-                        data-category="Info Medis">Info Medis</button>
-                </div>
+        <div id="content-loading" class="text-center py-20">
+            <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-primary border-t-transparent">
             </div>
+            <p class="mt-2 text-slate-500">Memuat detail layanan...</p>
+        </div>
 
-            <!-- Changed grid-cols-3 to grid-cols-4 as requested -->
-            <div id="wrapper-artikel" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Loading State -->
-                <div class="col-span-full text-center py-20 hidden" id="loading">
+        <div id="content-error" class="hidden text-center py-20 max-w-7xl mx-auto">
+            <div class="inline-flex items-center justify-center p-4 bg-red-100 dark:bg-red-900/20 rounded-full mb-4">
+                <i data-lucide="alert-triangle" class="w-8 h-8 text-red-500"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Layanan Tidak Ditemukan</h3>
+            <p class="text-slate-500 dark:text-slate-400 mt-2">Maaf, layanan yang Anda cari tidak tersedia atau telah
+                dihapus.</p>
+            <a href="layanan.html"
+                class="inline-flex mt-6 px-6 py-3 bg-primary text-white rounded-xl font-medium hover:bg-primary-dark transition">Kembali
+                ke Layanan</a>
+        </div>
+
+        <div id="content-wrapper" class="hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                <!-- Left Column: Image & Price -->
+                <div class="lg:col-span-1 space-y-8">
                     <div
-                        class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-primary border-t-transparent">
+                        class="rounded-3xl overflow-hidden shadow-2xl shadow-primary/20 aspect-video lg:aspect-square relative group">
+                        <img id="service-image" src="" alt=""
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                     </div>
-                    <p class="mt-2 text-slate-500">Memuat artikel...</p>
-                </div>
-            </div>
 
-            <div id="no-results" class="hidden text-center py-20">
-                <div
-                    class="inline-flex items-center justify-center p-4 bg-slate-100 dark:bg-slate-800 rounded-full mb-4">
-                    <i data-lucide="file-question" class="w-8 h-8 text-slate-400"></i>
+                    <div
+                        class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl p-6 shadow-lg">
+                        <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-2">Biaya Layanan</h3>
+                        <div class="text-2xl font-bold text-primary mb-4" id="service-price">Rp -</div>
+                        <button
+                            class="w-full bg-primary hover:bg-primary-dark text-white py-3.5 rounded-xl font-bold shadow-lg shadow-primary/30 transition transform active:scale-95 flex items-center justify-center gap-2">
+                            <i data-lucide="calendar-plus" class="w-5 h-5"></i>
+                            <span id="service-cta">Pesan Sekarang</span>
+                        </button>
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Tidak Ditemukan</h3>
-                <p class="text-slate-500 dark:text-slate-400 mt-2">Belum ada artikel untuk kategori ini.</p>
+
+                <!-- Right Column: Details -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div id="service-icon-wrapper" class="w-10 h-10 rounded-lg flex items-center justify-center">
+                            <i id="service-icon" data-lucide="activity" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-primary font-bold tracking-wide uppercase text-sm">Layanan Unggulan</span>
+                    </div>
+
+                    <h1 class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6 leading-tight"
+                        id="service-title">Nama Layanan</h1>
+
+                    <div class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-400 mb-8"
+                        id="service-description">
+                        <!-- Description will be injected here -->
+                    </div>
+
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800/50 rounded-2xl p-8 border border-slate-100 dark:border-slate-800">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6">Keunggulan Layanan Ini</h3>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4" id="service-features">
+                            <!-- Features will be injected here -->
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="bg-slate-50 dark:bg-[#0b1120] pt-16 pb-8 border-t border-slate-200 dark:border-slate-800">
@@ -311,17 +357,16 @@
         </div>
     </footer>
 
-    <!-- Modals -->
-    <!-- Login Modal -->
+    <!-- Modals (Login/Register) -->
     <div id="login-modal" class="fixed inset-0 z-[70] hidden">
+        <!-- Content same as other pages -->
         <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" id="login-modal-overlay">
         </div>
         <div class="absolute inset-0 flex items-center justify-center p-4">
             <div
                 class="bg-white dark:bg-card w-full max-w-md rounded-3xl shadow-2xl overflow-hidden transform transition-all scale-100 opacity-100 relative">
-                <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 transition close-modal-btn">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
+                <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 transition close-modal-btn"><i
+                        data-lucide="x" class="w-6 h-6"></i></button>
                 <div class="p-8">
                     <div class="text-center mb-8">
                         <div
@@ -332,55 +377,38 @@
                         <p class="text-slate-500 dark:text-slate-400 text-sm mt-2">Silakan masuk ke akun Anda</p>
                     </div>
                     <form class="space-y-4">
-                        <div>
-                            <label
+                        <div><label
                                 class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Email</label>
-                            <div class="relative">
-                                <i data-lucide="mail" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
-                                <input type="email"
+                            <div class="relative"><i data-lucide="mail"
+                                    class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i><input type="email"
                                     class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
-                                    placeholder="nama@email.com">
-                            </div>
+                                    placeholder="nama@email.com"></div>
                         </div>
-                        <div>
-                            <label
+                        <div><label
                                 class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Password</label>
-                            <div class="relative">
-                                <i data-lucide="lock" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
-                                <input type="password"
+                            <div class="relative"><i data-lucide="lock"
+                                    class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i><input type="password"
                                     class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
-                                    placeholder="••••••••">
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-between text-sm">
-                            <label class="flex items-center gap-2 text-slate-600 dark:text-slate-400 cursor-pointer">
-                                <input type="checkbox" class="rounded border-slate-300 text-primary focus:ring-primary">
-                                Ingat saya
-                            </label>
-                            <a href="#" class="text-primary font-medium hover:underline">Lupa password?</a>
+                                    placeholder="••••••••"></div>
                         </div>
                         <button type="button"
                             class="w-full bg-primary hover:bg-primary-dark text-white py-3 rounded-xl font-bold shadow-lg shadow-primary/30 transition transform active:scale-95">Masuk</button>
                     </form>
-                    <p class="text-center text-sm text-slate-500 dark:text-slate-400 mt-6">
-                        Belum punya akun? <button
+                    <p class="text-center text-sm text-slate-500 dark:text-slate-400 mt-6">Belum punya akun? <button
                             class="text-primary font-bold hover:underline switch-to-register">Daftar sekarang</button>
                     </p>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Register Modal -->
     <div id="register-modal" class="fixed inset-0 z-[70] hidden">
         <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" id="register-modal-overlay">
         </div>
         <div class="absolute inset-0 flex items-center justify-center p-4">
             <div
                 class="bg-white dark:bg-card w-full max-w-md rounded-3xl shadow-2xl overflow-hidden transform transition-all scale-100 opacity-100 relative">
-                <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 transition close-modal-btn">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
+                <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 transition close-modal-btn"><i
+                        data-lucide="x" class="w-6 h-6"></i></button>
                 <div class="p-8">
                     <div class="text-center mb-8">
                         <div
@@ -392,156 +420,125 @@
                             sehat</p>
                     </div>
                     <form class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Nama
+                        <div><label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Nama
                                 Lengkap</label>
-                            <div class="relative">
-                                <i data-lucide="user" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
-                                <input type="text"
+                            <div class="relative"><i data-lucide="user"
+                                    class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i><input type="text"
                                     class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
-                                    placeholder="Nama Anda">
-                            </div>
+                                    placeholder="Nama Anda"></div>
                         </div>
-                        <div>
-                            <label
+                        <div><label
                                 class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Email</label>
-                            <div class="relative">
-                                <i data-lucide="mail" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
-                                <input type="email"
+                            <div class="relative"><i data-lucide="mail"
+                                    class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i><input type="email"
                                     class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
-                                    placeholder="nama@email.com">
-                            </div>
+                                    placeholder="nama@email.com"></div>
                         </div>
-                        <div>
-                            <label
+                        <div><label
                                 class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Password</label>
-                            <div class="relative">
-                                <i data-lucide="lock" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
-                                <input type="password"
+                            <div class="relative"><i data-lucide="lock"
+                                    class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i><input type="password"
                                     class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
-                                    placeholder="••••••••">
-                            </div>
+                                    placeholder="••••••••"></div>
                         </div>
                         <button type="button"
                             class="w-full bg-primary hover:bg-primary-dark text-white py-3 rounded-xl font-bold shadow-lg shadow-primary/30 transition transform active:scale-95">Daftar
                             Sekarang</button>
                     </form>
-                    <p class="text-center text-sm text-slate-500 dark:text-slate-400 mt-6">
-                        Sudah punya akun? <button
-                            class="text-primary font-bold hover:underline switch-to-login">Masuk</button>
-                    </p>
+                    <p class="text-center text-sm text-slate-500 dark:text-slate-400 mt-6">Sudah punya akun? <button
+                            class="text-primary font-bold hover:underline switch-to-login">Masuk</button></p>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Main JS -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Detail Logic -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const container = document.getElementById('wrapper-artikel');
-            const loading = document.getElementById('loading');
-            const noResults = document.getElementById('no-results');
-            const filterBtns = document.querySelectorAll('.filter-btn');
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceId = urlParams.get('id');
+            const contentWrapper = document.getElementById('content-wrapper');
+            const loading = document.getElementById('content-loading');
+            const error = document.getElementById('content-error');
 
-            let allArticles = [];
+            if (!serviceId) {
+                loading.classList.add('hidden');
+                error.classList.remove('hidden');
+                lucide.createIcons();
+                return;
+            }
 
-            // Show loading initially
-            if (loading) loading.classList.remove('hidden');
-
-            fetch('data/artikel.json')
-                .then(response => response.json())
+            fetch('data/layanan.json')
+                .then(res => res.json())
                 .then(data => {
-                    allArticles = data;
-                    renderArticles(data);
-                    // Hide loading
-                    if (loading) loading.classList.add('hidden');
+                    const service = data.find(item => item.id === serviceId);
+
+                    loading.classList.add('hidden');
+
+                    if (!service) {
+                        error.classList.remove('hidden');
+                    } else {
+                        // Render Content
+                        document.title = `${service.title} - HealthLife`;
+                        document.getElementById('breadcrumb-title').textContent = service.title;
+
+                        document.getElementById('service-title').textContent = service.title;
+                        document.getElementById('service-description').innerHTML = `<p>${service.full_description || service.description}</p>`;
+                        document.getElementById('service-price').textContent = service.price || 'Hubungi Kami';
+                        document.getElementById('service-cta').textContent = service.actionText || 'Pesan Sekarang';
+                        document.getElementById('service-image').src = service.image || 'https://via.placeholder.com/500';
+                        document.getElementById('service-image').alt = service.title;
+
+                        // Icon Theme
+                        const iconWrapper = document.getElementById('service-icon-wrapper');
+                        const icon = document.getElementById('service-icon');
+
+                        // Apply classes
+                        if (service.iconBgClass) {
+                            service.iconBgClass.split(' ').forEach(cls => iconWrapper.classList.add(cls));
+                        } else {
+                            iconWrapper.classList.add('bg-primary/10');
+                        }
+
+                        if (service.iconColorClass) {
+                            service.iconColorClass.split(' ').forEach(cls => icon.classList.add(cls));
+                        } else {
+                            icon.classList.add('text-primary');
+                        }
+
+                        // Set icon name for Lucide to replace
+                        icon.setAttribute('data-lucide', service.icon);
+
+                        // Render Features
+                        const featuresList = document.getElementById('service-features');
+                        if (service.features && service.features.length > 0) {
+                            service.features.forEach(feature => {
+                                const li = `
+                                    <li class="flex items-start gap-3">
+                                        <div class="mt-1 w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center flex-shrink-0 text-green-600 dark:text-green-400">
+                                            <i data-lucide="check" class="w-3 h-3"></i>
+                                        </div>
+                                        <span class="text-slate-600 dark:text-slate-300 font-medium">${feature}</span>
+                                    </li>
+                                `;
+                                featuresList.insertAdjacentHTML('beforeend', li);
+                            });
+                        }
+
+                        contentWrapper.classList.remove('hidden');
+                    }
+
+                    lucide.createIcons();
                 })
                 .catch(err => {
                     console.error(err);
-                    if (loading) loading.classList.add('hidden');
-                    container.innerHTML = `
-                        <div class="col-span-full text-center p-8 bg-red-50 dark:bg-red-900/20 rounded-xl">
-                            <i data-lucide="alert-circle" class="w-12 h-12 text-red-500 mx-auto mb-4"></i>
-                            <h3 class="text-lg font-bold text-red-500 mb-2">Gagal Memuat Data</h3>
-                            <p class="text-slate-600 dark:text-slate-400">Pastikan file <code>data/artikel.json</code> tersedia.</p>
-                        </div>
-                    `;
+                    loading.classList.add('hidden');
+                    error.classList.remove('hidden');
                     lucide.createIcons();
                 });
-
-            function renderArticles(articles) {
-                container.innerHTML = '';
-
-                if (articles.length === 0) {
-                    noResults.classList.remove('hidden');
-                    return;
-                } else {
-                    noResults.classList.add('hidden');
-                }
-
-                articles.forEach((artikel, index) => {
-                    const delay = index * 100;
-                    // Provide defaults
-                    const readTime = artikel.read_time || '5';
-
-                    const html = `
-                        <article class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col h-full reveal active" style="animation-delay: ${delay}ms">
-                            <div class="relative h-48 overflow-hidden">
-                                <img src="${artikel.gambar}" alt="${artikel.judul}" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
-                                <div class="absolute top-4 left-4 bg-white/90 dark:bg-black/80 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-primary uppercase tracking-wide">
-                                    ${artikel.kategori}
-                                </div>
-                            </div>
-                            <div class="p-6 flex flex-col flex-1">
-                                <div class="flex items-center text-xs text-slate-500 dark:text-slate-400 mb-3 gap-2">
-                                    <i data-lucide="calendar" class="w-3 h-3"></i>
-                                    <span>${artikel.tanggal}</span>
-                                    <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
-                                    <i data-lucide="clock" class="w-3 h-3"></i>
-                                    <span>${readTime} min read</span>
-                                </div>
-                                <h3 class="font-bold text-xl mb-3 text-slate-900 dark:text-white leading-tight group-hover:text-primary transition line-clamp-2">
-                                    ${artikel.judul}
-                                </h3>
-                                <p class="text-slate-600 dark:text-slate-400 text-sm mb-4 line-clamp-3 flex-1">
-                                    ${artikel.deskripsi}
-                                </p>
-                                <a href="detail-artikel.html?slug=${artikel.slug}" class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-3 transition-all mt-auto self-start">
-                                    Baca Selengkapnya <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                                </a>
-                            </div>
-                        </article>
-                    `;
-                    container.insertAdjacentHTML('beforeend', html);
-                });
-                lucide.createIcons();
-            }
-
-            // Filter Logic
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    // Update Active State
-                    filterBtns.forEach(b => {
-                        b.classList.remove('bg-primary', 'text-white', 'border-transparent');
-                        b.classList.add('bg-white', 'dark:bg-card', 'text-slate-600', 'dark:text-slate-400', 'border-slate-200', 'dark:border-slate-700');
-                    });
-                    btn.classList.remove('bg-white', 'dark:bg-card', 'text-slate-600', 'dark:text-slate-400', 'border-slate-200', 'dark:border-slate-700');
-                    btn.classList.add('bg-primary', 'text-white', 'border-transparent');
-
-                    const category = btn.getAttribute('data-category');
-
-                    if (category === 'all') {
-                        renderArticles(allArticles);
-                    } else {
-                        // Loose matching for filter buttons vs data categories
-                        const filtered = allArticles.filter(art => {
-                            return (art.kategori && art.kategori.toLowerCase().includes(category.toLowerCase())) ||
-                                (category && category.toLowerCase().includes(art.kategori.toLowerCase()));
-                        });
-                        renderArticles(filtered);
-                    }
-                });
-            });
         });
     </script>
 </body>

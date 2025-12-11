@@ -45,11 +45,17 @@
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="index.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Beranda</a>
+                    <a href="profile.html"
+                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Profile
+                        Kami</a>
                     <a href="layanan.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Layanan</a>
                     <a href="dokter.html" class="text-primary font-medium transition">Cari Dokter</a>
                     <a href="artikel.html"
                         class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Artikel</a>
+                    <a href="janji-rs.html"
+                        class="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition">Buat
+                        Janji</a>
                 </div>
 
                 <!-- Right Actions -->
@@ -60,11 +66,12 @@
                         <i data-lucide="sun" class="w-5 h-5 block dark:hidden"></i>
                     </button>
 
-                    <a href="#" class="text-slate-600 dark:text-slate-300 font-medium hover:text-primary">Masuk</a>
-                    <a href="#"
-                        class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full font-semibold transition shadow-lg shadow-primary/30 hover:shadow-primary/50 flex items-center gap-2">
+                    <button
+                        class="text-slate-600 dark:text-slate-300 font-medium hover:text-primary login-btn">Masuk</button>
+                    <button
+                        class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full font-semibold transition shadow-lg shadow-primary/30 hover:shadow-primary/50 flex items-center gap-2 register-btn">
                         Daftar
-                    </a>
+                    </button>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -107,6 +114,11 @@
                 <i data-lucide="home" class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
                 Beranda
             </a>
+            <a href="profile.html"
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                <i data-lucide="users" class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+                Profile Kami
+            </a>
             <a href="layanan.html"
                 class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
                 <i data-lucide="stethoscope"
@@ -124,21 +136,27 @@
                     class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
                 Artikel
             </a>
+            <a href="janji-rs.html"
+                class="mobile-link flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-primary/10 hover:text-primary rounded-xl transition-all font-medium group">
+                <i data-lucide="calendar-heart"
+                    class="w-5 h-5 text-slate-400 group-hover:text-primary transition-colors"></i>
+                Buat Janji
+            </a>
             <div class="my-6 border-t border-slate-100 dark:border-slate-800"></div>
             <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider px-4 mb-2">Akun</div>
-            <a href="#"
-                class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-all font-medium">
+            <button
+                class="w-full flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-all font-medium login-btn">
                 <i data-lucide="log-in" class="w-5 h-5 text-slate-400"></i>
                 Masuk
-            </a>
+            </button>
         </div>
 
         <div class="p-6 border-t border-slate-100 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/50">
-            <a href="#"
-                class="block w-full bg-primary hover:bg-primary-dark text-white text-center py-3.5 rounded-xl font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95">
+            <button
+                class="block w-full bg-primary hover:bg-primary-dark text-white text-center py-3.5 rounded-xl font-bold shadow-lg shadow-primary/30 transition-transform active:scale-95 register-btn">
                 Daftar Sekarang
-            </a>
-            <p class="text-center text-xs text-slate-400 mt-4">© 2023 HealthLife App</p>
+            </button>
+            <p class="text-center text-xs text-slate-400 mt-4">© 2025 HealthLife App</p>
         </div>
     </div>
 
@@ -147,26 +165,28 @@
     </div>
 
     <!-- Main Content -->
-    <section class="pt-32 pb-20 bg-white dark:bg-dark min-h-screen">
+    <section class="pt-32 pb-20 bg-slate-50 dark:bg-[#162032] min-h-screen">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-                <div>
-                    <span class="text-primary font-semibold tracking-wider uppercase text-sm">Dokter Spesialis</span>
-                    <h1 class="text-3xl md:text-4xl font-bold mt-2 text-slate-900 dark:text-white">Temukan Dokter
-                        Terbaik</h1>
-                    <p class="text-slate-600 dark:text-slate-400 mt-4 max-w-2xl">
-                        Pilih jadwal konsultasi dengan dokter spesialis berpengalaman sesuai kebutuhan medis Anda.
-                    </p>
-                </div>
-                <!-- Filter or Search could go here -->
-                <div class="mt-4 md:mt-0 relative w-full md:w-auto">
-                    <input type="text" placeholder="Cari nama dokter..."
-                        class="w-full md:w-64 pl-10 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-card focus:outline-none focus:ring-2 focus:ring-primary shadow-sm text-sm dark:text-white">
-                    <i data-lucide="search" class="w-5 h-5 text-slate-400 absolute left-3 top-3.5"></i>
+            <div class="text-center mb-16">
+                <span class="text-primary font-semibold tracking-wider uppercase text-sm">Tim Medis Kami</span>
+                <h1 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-slate-900 dark:text-white">Temukan Dokter
+                    Terbaik</h1>
+                <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                    Konsultasi dengan dokter spesialis berpengalaman kami. Cari berdasarkan nama atau spesialisasi.
+                </p>
+
+                <!-- Search Box -->
+                <div class="max-w-xl mx-auto mt-8 relative">
+                    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                        <i data-lucide="search" class="w-5 h-5 text-slate-400"></i>
+                    </div>
+                    <input type="text" id="doctor-search"
+                        class="w-full pl-12 pr-4 py-4 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-card focus:outline-none focus:ring-2 focus:ring-primary shadow-lg shadow-primary/5 transition dark:text-white"
+                        placeholder="Cari dokter atau spesialis...">
                 </div>
             </div>
 
-            <div id="dokter-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div id="dokter-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Loading State -->
                 <div class="col-span-full text-center py-20 hidden" id="loading">
                     <div
@@ -175,6 +195,16 @@
                     <p class="mt-2 text-slate-500">Memuat data dokter...</p>
                 </div>
             </div>
+
+            <div id="no-results" class="hidden text-center py-20">
+                <div
+                    class="inline-flex items-center justify-center p-4 bg-slate-100 dark:bg-slate-800 rounded-full mb-4">
+                    <i data-lucide="search-x" class="w-8 h-8 text-slate-400"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Tidak Ditemukan</h3>
+                <p class="text-slate-500 dark:text-slate-400 mt-2">Maaf, kami tidak menemukan dokter yang sesuai dengan
+                    pencarian Anda.</p>
+            </div>
         </div>
     </section>
 
@@ -182,6 +212,7 @@
     <footer class="bg-slate-50 dark:bg-[#0b1120] pt-16 pb-8 border-t border-slate-200 dark:border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
                 <div>
                     <div class="flex items-center gap-2 mb-6">
                         <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white">
@@ -189,100 +220,233 @@
                         </div>
                         <span class="text-xl font-bold text-slate-900 dark:text-white">HealthLife</span>
                     </div>
-                    <p class="text-slate-500 dark:text-slate-400 mb-6">Partner kesehatan terpercaya keluarga Anda.
-                        Melayani dengan hati, didukung teknologi terkini.</p>
+                    <p class="text-slate-500 dark:text-slate-400 mb-6">Partner kesehatan terpercaya keluarga
+                        Anda. Melayani dengan hati, didukung teknologi terkini.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-card flex items-center justify-center text-slate-500 hover:text-primary hover:shadow-md transition border border-slate-100 dark:border-slate-700"><i
+                                data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-card flex items-center justify-center text-slate-500 hover:text-primary hover:shadow-md transition border border-slate-100 dark:border-slate-700"><i
+                                data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white dark:bg-card flex items-center justify-center text-slate-500 hover:text-primary hover:shadow-md transition border border-slate-100 dark:border-slate-700"><i
+                                data-lucide="twitter" class="w-5 h-5"></i></a>
+                    </div>
                 </div>
+
                 <!-- Links -->
                 <div>
                     <h4 class="font-bold text-slate-900 dark:text-white mb-6">Layanan</h4>
                     <ul class="space-y-3">
-                        <li><a href="layanan.html"
-                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Semua
-                                Layanan</a></li>
-                        <li><a href="dokter.html"
-                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Cari Dokter</a>
-                        </li>
-                        <li><a href="artikel.html"
-                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Artikel
-                                Kesehatan</a></li>
+                        <li><a href="dokter.html" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Chat
+                                Dokter</a></li>
+                        <li><a href="detail-layanan.html?id=toko-obat" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Toko
+                                Obat</a></li>
+                        <li><a href="janji-rs.html" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Buat
+                                Janji RS</a></li>
+                        <li><a href="detail-layanan.html?id=cek-lab" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Cek
+                                Lab</a></li>
                     </ul>
                 </div>
+
+                <!-- Company -->
                 <div>
                     <h4 class="font-bold text-slate-900 dark:text-white mb-6">Perusahaan</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Tentang
+                        <li><a href="profile.html" class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Profil
                                 Kami</a></li>
-                        <li><a href="#"
-                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Karir</a></li>
+                        <li><a href="layanan.html"
+                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Layanan</a>
+                        </li>
+                        <li><a href="artikel.html"
+                                class="text-slate-500 dark:text-slate-400 hover:text-primary transition">Artikel</a></li>
                     </ul>
                 </div>
+
+                <!-- Contact -->
                 <div>
                     <h4 class="font-bold text-slate-900 dark:text-white mb-6">Hubungi Kami</h4>
                     <ul class="space-y-3">
                         <li class="flex items-start gap-3 text-slate-500 dark:text-slate-400">
                             <i data-lucide="map-pin" class="w-5 h-5 text-primary flex-shrink-0"></i>
-                            <span>Jl. Sudirman No. 88, Jakarta Selatan</span>
+                            <span>Jl. Bj Habibie No. 88, Kota Gorontalo, Indonesia</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-500 dark:text-slate-400">
+                            <i data-lucide="phone" class="w-5 h-5 text-primary flex-shrink-0"></i>
+                            <span>+62 21 555 0123</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-500 dark:text-slate-400">
+                            <i data-lucide="mail" class="w-5 h-5 text-primary flex-shrink-0"></i>
+                            <span>support@healthlife.com</span>
                         </li>
                     </ul>
                 </div>
             </div>
+
             <div
                 class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-slate-500 dark:text-slate-400 text-sm">© 2023 HealthLife. All rights reserved.</p>
+                <p class="text-slate-500 dark:text-slate-400 text-sm">© 2025 HealthLife. All rights
+                    reserved.</p>
+                <div class="flex gap-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1200px-Google_Play_Store_badge_EN.svg.png"
+                        class="h-10 cursor-pointer" alt="Play Store">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/2560px-Download_on_the_App_Store_Badge.svg.png"
+                        class="h-10 cursor-pointer" alt="App Store">
+                </div>
             </div>
         </div>
     </footer>
+
+    <!-- Modals -->
+    <!-- Login Modal -->
+    <div id="login-modal" class="fixed inset-0 z-[70] hidden">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" id="login-modal-overlay">
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div
+                class="bg-white dark:bg-card w-full max-w-md rounded-3xl shadow-2xl overflow-hidden transform transition-all scale-100 opacity-100 relative">
+                <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 transition close-modal-btn">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+                <div class="p-8">
+                    <div class="text-center mb-8">
+                        <div
+                            class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mx-auto mb-4">
+                            <i data-lucide="log-in" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Selamat Datang Kembali</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-2">Silakan masuk ke akun Anda</p>
+                    </div>
+                    <form class="space-y-4">
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Email</label>
+                            <div class="relative">
+                                <i data-lucide="mail" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                <input type="email"
+                                    class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
+                                    placeholder="nama@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Password</label>
+                            <div class="relative">
+                                <i data-lucide="lock" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                <input type="password"
+                                    class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
+                                    placeholder="••••••••">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-sm">
+                            <label class="flex items-center gap-2 text-slate-600 dark:text-slate-400 cursor-pointer">
+                                <input type="checkbox" class="rounded border-slate-300 text-primary focus:ring-primary">
+                                Ingat saya
+                            </label>
+                            <a href="#" class="text-primary font-medium hover:underline">Lupa password?</a>
+                        </div>
+                        <button type="button"
+                            class="w-full bg-primary hover:bg-primary-dark text-white py-3 rounded-xl font-bold shadow-lg shadow-primary/30 transition transform active:scale-95">Masuk</button>
+                    </form>
+                    <p class="text-center text-sm text-slate-500 dark:text-slate-400 mt-6">
+                        Belum punya akun? <button
+                            class="text-primary font-bold hover:underline switch-to-register">Daftar sekarang</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="fixed inset-0 z-[70] hidden">
+        <div class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" id="register-modal-overlay">
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div
+                class="bg-white dark:bg-card w-full max-w-md rounded-3xl shadow-2xl overflow-hidden transform transition-all scale-100 opacity-100 relative">
+                <button class="absolute top-4 right-4 text-slate-400 hover:text-red-500 transition close-modal-btn">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+                <div class="p-8">
+                    <div class="text-center mb-8">
+                        <div
+                            class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center text-primary mx-auto mb-4">
+                            <i data-lucide="user-plus" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Buat Akun Baru</h3>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm mt-2">Gabung bersama kami untuk hidup lebih
+                            sehat</p>
+                    </div>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Nama
+                                Lengkap</label>
+                            <div class="relative">
+                                <i data-lucide="user" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                <input type="text"
+                                    class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
+                                    placeholder="Nama Anda">
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Email</label>
+                            <div class="relative">
+                                <i data-lucide="mail" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                <input type="email"
+                                    class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
+                                    placeholder="nama@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Password</label>
+                            <div class="relative">
+                                <i data-lucide="lock" class="absolute left-4 top-3.5 w-5 h-5 text-slate-400"></i>
+                                <input type="password"
+                                    class="w-full pl-12 pr-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-primary dark:text-white transition"
+                                    placeholder="••••••••">
+                            </div>
+                        </div>
+                        <button type="button"
+                            class="w-full bg-primary hover:bg-primary-dark text-white py-3 rounded-xl font-bold shadow-lg shadow-primary/30 transition transform active:scale-95">Daftar
+                            Sekarang</button>
+                    </form>
+                    <p class="text-center text-sm text-slate-500 dark:text-slate-400 mt-6">
+                        Sudah punya akun? <button
+                            class="text-primary font-bold hover:underline switch-to-login">Masuk</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="assets/js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const container = document.getElementById('dokter-container');
             const loading = document.getElementById('loading');
+            const searchInput = document.getElementById('doctor-search');
+            const noResults = document.getElementById('no-results');
 
-            loading.classList.remove('hidden');
+            let allDoctors = [];
+
+            // Show loading initially
+            if (loading) loading.classList.remove('hidden');
 
             fetch('data/dokter.json')
                 .then(response => response.json())
                 .then(data => {
-                    loading.classList.add('hidden');
-                    if (data.length === 0) {
-                        container.innerHTML = '<p class="text-center col-span-full text-slate-500">Tidak ada data dokter.</p>';
-                        return;
-                    }
-                    data.forEach((item, index) => {
-                        const delay = index * 100;
-                        const formattedPrice = new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(item.biaya_konsultasi);
-
-                        // Fallback image if needed, though JSON seems to have Valid URLs
-
-                        const html = `
-                             <div class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl p-4 hover:shadow-lg transition text-center reveal active" style="animation-delay: ${delay}ms">
-                                <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary/20 p-1">
-                                    <img src="${item.foto}" alt="${item.nama}" class="w-full h-full rounded-full object-cover">
-                                </div>
-                                <h3 class="font-bold text-lg text-slate-900 dark:text-white">${item.nama}</h3>
-                                <p class="text-primary text-sm font-medium mb-2">${item.spesialisasi}</p>
-                                <div class="flex items-center justify-center gap-1 text-yellow-400 text-sm mb-4">
-                                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
-                                    <span class="text-slate-600 dark:text-slate-400 font-medium">${item.rating} (${item.jumlah_pasien}+)</span>
-                                </div>
-                                <div class="flex items-center justify-between bg-slate-50 dark:bg-slate-800/50 p-3 rounded-xl">
-                                    <span class="text-xs font-medium text-slate-500">Mulai dari</span>
-                                    <span class="text-sm font-bold text-slate-800 dark:text-white">${formattedPrice}</span>
-                                </div>
-                                <a href="detail-dokter.html?nama=${encodeURIComponent(item.nama)}" class="block w-full mt-4 bg-primary/10 hover:bg-primary text-primary hover:text-white py-2 rounded-lg font-medium transition text-sm text-center">
-                                    Chat Sekarang
-                                </a>
-                            </div>
-                        `;
-                        container.insertAdjacentHTML('beforeend', html);
-                    });
-                    lucide.createIcons();
+                    allDoctors = data;
+                    renderDoctors(data);
+                    // Hide loading (it might be removed from DOM by renderDoctors, which is fine)
+                    if (loading) loading.classList.add('hidden');
                 })
                 .catch(err => {
                     console.error(err);
-                    loading.classList.add('hidden');
-                    container.innerHTML += `
+                    if (loading) loading.classList.add('hidden');
+                    container.innerHTML = `
                         <div class="col-span-full text-center p-8 bg-red-50 dark:bg-red-900/20 rounded-xl">
                             <i data-lucide="alert-circle" class="w-12 h-12 text-red-500 mx-auto mb-4"></i>
                             <h3 class="text-lg font-bold text-red-500 mb-2">Gagal Memuat Data</h3>
@@ -291,6 +455,55 @@
                     `;
                     lucide.createIcons();
                 });
+
+            function renderDoctors(doctors) {
+                container.innerHTML = '';
+
+                if (doctors.length === 0) {
+                    noResults.classList.remove('hidden');
+                    return;
+                } else {
+                    noResults.classList.add('hidden');
+                }
+
+                doctors.forEach((dokter, index) => {
+                    const delay = index * 100;
+                    // Format available schedule (take the first one for brevity)
+                    const schedule = dokter.jadwal_praktik && dokter.jadwal_praktik.length > 0
+                        ? `${dokter.jadwal_praktik[0].hari}, ${dokter.jadwal_praktik[0].jam}`
+                        : 'Jadwal Menyusul';
+
+                    const html = `
+                        <div class="bg-white dark:bg-card border border-slate-100 dark:border-slate-800 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 text-center group relative overflow-hidden reveal active" style="animation-delay: ${delay}ms">
+                            <div class="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden border-2 border-primary/20 p-1 group-hover:border-primary transition-colors">
+                                <img src="${dokter.foto}" alt="${dokter.nama}" class="w-full h-full rounded-full object-cover">
+                            </div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-1 group-hover:text-primary transition">${dokter.nama}</h3>
+                            <p class="text-primary text-sm font-medium mb-2">${dokter.spesialisasi}</p>
+                            <div class="flex items-center justify-center gap-2 text-slate-500 dark:text-slate-400 text-sm mb-4">
+                                <i data-lucide="clock" class="w-4 h-4"></i>
+                                <span>${schedule}</span>
+                            </div>
+                            <a href="janji-rs.html" class="block w-full py-2.5 rounded-xl bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-semibold hover:bg-primary hover:text-white transition-all active:scale-95 flex items-center justify-center gap-2">
+                                <i data-lucide="calendar-plus" class="w-4 h-4"></i>
+                                Buat Janji
+                            </a>
+                        </div>
+                    `;
+                    container.insertAdjacentHTML('beforeend', html);
+                });
+                lucide.createIcons();
+            }
+
+            // Search Logic
+            searchInput.addEventListener('input', (e) => {
+                const keyword = e.target.value.toLowerCase();
+                const filteredDoctors = allDoctors.filter(doctor => {
+                    return doctor.nama.toLowerCase().includes(keyword) ||
+                        doctor.spesialisasi.toLowerCase().includes(keyword);
+                });
+                renderDoctors(filteredDoctors);
+            });
         });
     </script>
 </body>
